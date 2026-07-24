@@ -6,7 +6,7 @@
 - **Dark mode**: add class `dark` to any ancestor (usually the root element). `ThemeProvider` (localStorage-backed) ships in the bundle if you need a toggle.
 - This kit is built on **base-ui, not Radix**: compose triggers with the `render` prop, e.g. `<DialogTrigger render={<Button variant="outline" />}>Open</DialogTrigger>` — there is **no `asChild`**.
 - **Menu labels must be wrapped in a group**: a bare `DropdownMenuLabel`/`ContextMenuLabel`/`MenubarLabel` outside `*MenuGroup`/`*MenuRadioGroup` throws and blanks the whole tree. Always `<DropdownMenuGroup><DropdownMenuLabel>…</DropdownMenuLabel>…</DropdownMenuGroup>`.
-- Charts: give the recharts element **explicit `width`/`height`** inside `ChartContainer` and set `isAnimationActive={false}` on series; pass `ChartTooltipContent`/`ChartLegendContent` as the `content` of recharts' own `Tooltip`/`Legend`. Color series with `var(--chart-1)`…`var(--chart-5)`.
+- Charts: give the recharts element **explicit `width`/`height`** inside `ChartContainer` and set `isAnimationActive={false}` on series; pass `ChartTooltipContent`/`ChartLegendContent` as the `content` of recharts' own `Tooltip`/`Legend`. Color series with `var(--chart-1)`…`var(--chart-6)`, assigned in token order; a single-series chart uses `--chart-1`.
 - `ResizablePanelGroup` uses `orientation="vertical"` (react-resizable-panels v4 renamed `direction`).
 
 ## Styling idiom
@@ -17,12 +17,14 @@ Token vocabulary (each `--x` has a `--x-foreground` partner where noted; all are
 
 - Surfaces: `--background`, `--card`+fg, `--popover`+fg, `--sidebar`(+fg/-primary/-accent/-border/-ring)
 - Semantic: `--primary`+fg, `--secondary`+fg, `--muted`+fg, `--accent`+fg, `--destructive`, `--border`, `--input`, `--ring`
-- Charts: `--chart-1`…`--chart-5` (a lime-green oklch scale, light → dark)
-- Shape/type: `--radius` (plus `--radius-sm|md|lg|xl`), `--font-sans` / `--font-heading` = "Geist Variable"
+- Charts: `--chart-1`…`--chart-6` — a six-color categorical scale: green (brand) / blue / amber / violet / rose / teal, ordered for adjacent distinctness. These hues belong **only** in charts and the avatar tint below — never in UI chrome (buttons, badges, selection states, rings), which accents through `--primary` alone.
+- Shape/type: `--radius` (0.625rem) plus `--radius-sm` and `--radius-md` — those three are all the shipped stylesheet defines, so only they resolve. `--font-sans` / `--font-heading` = "Geist Variable"
 
 Example glue: `style={{ display: "grid", gap: 12, background: "var(--muted)", borderRadius: "var(--radius)" }}`.
 
 Component variants come from props, never custom classes: `Button variant="outline" size="sm"`, `Badge variant="destructive"`, `Alert variant="destructive"`, `Card size="sm"`, `Tabs variant="line"`. Mark button icons with `data-icon="inline-start"`/`"inline-end"` for correct padding.
+
+**Avatars.** Default to a neutral fill (`--muted` background, `--foreground` initials). Only when color aids identification (member lists, multi-user views) tint the background with a `--chart-*` hue at ~12–15% opacity and set the initials in that same hue at full value, assigning hues in `--chart-1`…`--chart-6` order by a stable hash of the identity. There are no shipped `bg-chart-*` utility classes — write the tint inline, e.g. `style={{ background: "color-mix(in oklab, var(--chart-2) 15%, transparent)", color: "var(--chart-2)" }}`.
 
 ## Where the truth lives
 
