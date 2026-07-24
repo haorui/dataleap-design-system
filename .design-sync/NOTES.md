@@ -28,3 +28,4 @@
 - ComboboxInput style lands on the inner input — constrain width with a wrapper div around the whole Combobox. InputOTP (input-otp v3) is controlled-only: `value` + no-op onChange. SelectValue takes `placeholder`; pass `items` to Select root for closed-trigger label.
 - Sheets reserve tall cells with top-aligned content — empty space below a story is normal, not collapse.
 - Empty renders `border-dashed` but no border width — a framed empty state needs caller-supplied border. Collapsible is unstyled by design; style triggers via `render` prop (e.g. Button).
+- 2026-07-24: primary 换为 leap-aide 品牌绿 (#18A00D light / #5AC750 dark,含 ring + sidebar-primary/-ring),仅改 src/index.css;其余 token 保持 stock。DESIGN.md 未同步更新(其自述 index.css 为 ground truth)。styling-only 重同步:grades 全部 carry,仅上传 _ds_bundle.css/styles.css/README/_ds_sync.json。
