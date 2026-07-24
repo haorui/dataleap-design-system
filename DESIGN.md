@@ -1,9 +1,10 @@
 ---
-name: shadcn/ui (stock)
+name: leap-aide shadcn (tier-2)
 description: >
-  Unmodified stock shadcn/ui design system — base-nova style, neutral base
-  color, Geist typeface. This file mirrors src/index.css, which is the code
-  ground truth; if they disagree, index.css wins.
+  shadcn/ui skeleton with the DataLeap brand pinned on top — stock neutral
+  surfaces and Geist typeface, brand-green primary, six-color categorical
+  chart scale. This file mirrors src/index.css, which is the code ground
+  truth; if they disagree, index.css wins.
 colors:
   light:
     background: "oklch(1 0 0)"
@@ -12,9 +13,9 @@ colors:
     card-foreground: "oklch(0.145 0 0)"
     popover: "oklch(1 0 0)"
     popover-foreground: "oklch(0.145 0 0)"
-    primary: "oklch(0.205 0 0)"
-    primary-foreground: "oklch(0.985 0 0)"
-    secondary: "oklch(0.97 0 0)"
+    primary: "#18A00D"
+    primary-foreground: "#FFFFFF"
+    secondary: "oklch(0.967 0.001 286.375)"
     secondary-foreground: "oklch(0.205 0 0)"
     muted: "oklch(0.97 0 0)"
     muted-foreground: "oklch(0.556 0 0)"
@@ -24,15 +25,16 @@ colors:
     border: "oklch(0.922 0 0)"
     input: "oklch(0.922 0 0)"
     ring: "oklch(0.708 0 0)"
-    chart-1: "oklch(0.87 0 0)"
-    chart-2: "oklch(0.556 0 0)"
-    chart-3: "oklch(0.439 0 0)"
-    chart-4: "oklch(0.371 0 0)"
-    chart-5: "oklch(0.269 0 0)"
+    chart-1: "#18A00D"
+    chart-2: "#2563EB"
+    chart-3: "#E8A317"
+    chart-4: "#7C3AED"
+    chart-5: "#E11D48"
+    chart-6: "#0D9488"
     sidebar: "oklch(0.985 0 0)"
     sidebar-foreground: "oklch(0.145 0 0)"
-    sidebar-primary: "oklch(0.205 0 0)"
-    sidebar-primary-foreground: "oklch(0.985 0 0)"
+    sidebar-primary: "oklch(0.627 0.194 149.214)"
+    sidebar-primary-foreground: "oklch(0.982 0.018 155.826)"
     sidebar-accent: "oklch(0.97 0 0)"
     sidebar-accent-foreground: "oklch(0.205 0 0)"
     sidebar-border: "oklch(0.922 0 0)"
@@ -44,9 +46,9 @@ colors:
     card-foreground: "oklch(0.985 0 0)"
     popover: "oklch(0.205 0 0)"
     popover-foreground: "oklch(0.985 0 0)"
-    primary: "oklch(0.922 0 0)"
-    primary-foreground: "oklch(0.205 0 0)"
-    secondary: "oklch(0.269 0 0)"
+    primary: "#5AC750"
+    primary-foreground: "#0A0A0A"
+    secondary: "oklch(0.274 0.006 286.033)"
     secondary-foreground: "oklch(0.985 0 0)"
     muted: "oklch(0.269 0 0)"
     muted-foreground: "oklch(0.708 0 0)"
@@ -56,15 +58,16 @@ colors:
     border: "oklch(1 0 0 / 10%)"
     input: "oklch(1 0 0 / 15%)"
     ring: "oklch(0.556 0 0)"
-    chart-1: "oklch(0.87 0 0)"
-    chart-2: "oklch(0.556 0 0)"
-    chart-3: "oklch(0.439 0 0)"
-    chart-4: "oklch(0.371 0 0)"
-    chart-5: "oklch(0.269 0 0)"
+    chart-1: "#5AC750"
+    chart-2: "#60A5FA"
+    chart-3: "#FBBF24"
+    chart-4: "#A78BFA"
+    chart-5: "#FB7185"
+    chart-6: "#2DD4BF"
     sidebar: "oklch(0.205 0 0)"
     sidebar-foreground: "oklch(0.985 0 0)"
-    sidebar-primary: "oklch(0.488 0.243 264.376)"
-    sidebar-primary-foreground: "oklch(0.985 0 0)"
+    sidebar-primary: "oklch(0.723 0.219 149.579)"
+    sidebar-primary-foreground: "oklch(0.982 0.018 155.826)"
     sidebar-accent: "oklch(0.269 0 0)"
     sidebar-accent-foreground: "oklch(0.985 0 0)"
     sidebar-border: "oklch(1 0 0 / 10%)"
@@ -89,23 +92,28 @@ components:
   count: 60
 ---
 
-# shadcn/ui — stock design system
+# leap-aide shadcn — tier-2 design system
 
-This repository is a faithful, **unmodified** snapshot of stock shadcn/ui in
-consumption shape: what `shadcn init` (base-nova, neutral, Geist) plus
-`shadcn add --all` produces. It exists so design tools and AI agents can index
-the real thing — real component source, real tokens — instead of approximating
-it.
+A shadcn/ui skeleton (`shadcn init` base-nova + `add --all`, components
+verbatim) with the DataLeap brand pinned on top. Three adjudicated choices
+define the tier:
+
+- **Typeface: Geist** (stock) — not Plus Jakarta Sans.
+- **Neutrals: stock oklch** — surfaces, borders, muted text all keep shadcn's
+  achromatic scale.
+- **Charts: the leap-aide six-color categorical scale** (`chart-1..6`, brand
+  green first, ordered for adjacent distinctness) — not a mono green ramp.
 
 ## Rules
 
 - **Semantic tokens only.** Color always flows through the semantic variables
   (`bg-background`, `text-muted-foreground`, `border-border`, …). Never
   hard-code hex/oklch values in components or layouts.
-- **Neutral-first.** The stock palette is achromatic; the only chromatic
-  values are `destructive` (red) and the dark-mode `sidebar-primary` (blue).
-  Emphasis comes from value contrast (`primary` = near-black on light,
-  near-white on dark), not hue.
+- **Single green accent.** `primary` is DataLeap brand green (#18A00D light /
+  #5AC750 dark) and is the only accent hue in UI chrome — selection rings,
+  toggles, active states. `destructive` red stays for destructive actions.
+  The categorical `chart-*` hues appear ONLY inside multi-series charts,
+  never in chrome. Everything else reads through neutral value contrast.
 - **One radius knob.** All corner rounding derives from `--radius` (0.625rem)
   via the multiplier scale. Change the base, everything follows.
 - **Dark mode is a value flip** on the `.dark` class — same token names, no
