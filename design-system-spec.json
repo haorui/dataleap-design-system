@@ -1,6 +1,6 @@
 {
   "name": "leap-aide shadcn (tier-2)",
-  "description": "shadcn/ui skeleton with the DataLeap brand pinned: brand-green primary (#18A00D/#5AC750), mono green chart ramp, stock neutral oklch surfaces, Geist font. 60 components installed verbatim via `shadcn add --all`.",
+  "description": "shadcn/ui skeleton with the DataLeap brand pinned: brand-green primary (#18A00D/#5AC750), six-color green-anchored categorical chart scale (chart-1..6), tinted identity avatars, stock neutral oklch surfaces, Geist font. 60 components installed verbatim via `shadcn add --all`.",
   "framework": "react",
   "language": "typescript",
   "styling": "tailwind-v4-css-variables",

@@ -2,9 +2,9 @@
 name: leap-aide shadcn (tier-2)
 description: >
   shadcn/ui skeleton with the DataLeap brand pinned on top — stock neutral
-  surfaces and Geist typeface, brand-green primary, mono green chart ramp.
-  This file mirrors src/index.css, which is the code ground truth; if they
-  disagree, index.css wins.
+  surfaces and Geist typeface, brand-green primary, six-color categorical
+  chart scale (green-anchored). This file mirrors src/index.css, which is
+  the code ground truth; if they disagree, index.css wins.
 colors:
   light:
     background: "oklch(1 0 0)"
@@ -25,11 +25,12 @@ colors:
     border: "oklch(0.922 0 0)"
     input: "oklch(0.922 0 0)"
     ring: "oklch(0.708 0 0)"
-    chart-1: "oklch(0.897 0.196 126.665)"
-    chart-2: "oklch(0.768 0.233 130.85)"
-    chart-3: "oklch(0.648 0.2 131.684)"
-    chart-4: "oklch(0.532 0.157 131.589)"
-    chart-5: "oklch(0.453 0.124 130.933)"
+    chart-1: "#18A00D"
+    chart-2: "#2563EB"
+    chart-3: "#E8A317"
+    chart-4: "#7C3AED"
+    chart-5: "#E11D48"
+    chart-6: "#0D9488"
     sidebar: "oklch(0.985 0 0)"
     sidebar-foreground: "oklch(0.145 0 0)"
     sidebar-primary: "oklch(0.627 0.194 149.214)"
@@ -57,11 +58,12 @@ colors:
     border: "oklch(1 0 0 / 10%)"
     input: "oklch(1 0 0 / 15%)"
     ring: "oklch(0.556 0 0)"
-    chart-1: "oklch(0.897 0.196 126.665)"
-    chart-2: "oklch(0.768 0.233 130.85)"
-    chart-3: "oklch(0.648 0.2 131.684)"
-    chart-4: "oklch(0.532 0.157 131.589)"
-    chart-5: "oklch(0.453 0.124 130.933)"
+    chart-1: "#5AC750"
+    chart-2: "#60A5FA"
+    chart-3: "#FBBF24"
+    chart-4: "#A78BFA"
+    chart-5: "#FB7185"
+    chart-6: "#2DD4BF"
     sidebar: "oklch(0.205 0 0)"
     sidebar-foreground: "oklch(0.985 0 0)"
     sidebar-primary: "oklch(0.723 0.219 149.579)"
@@ -99,9 +101,10 @@ define the tier:
 - **Typeface: Geist** (stock) — not Plus Jakarta Sans.
 - **Neutrals: stock oklch** — surfaces, borders, muted text all keep shadcn's
   achromatic scale.
-- **Charts: the mono green ramp** (`chart-1..5`, the shadcn green-preset
-  oklch scale, hue ~130) — series read through value steps of one hue, not a
-  multi-color categorical palette.
+- **Charts: the leap-aide six-color categorical scale** (`chart-1..6` —
+  brand green first, then blue / amber / violet / rose / teal, ordered for
+  adjacent distinctness). Multi-series charts assign hues in token order;
+  single-series charts just use `chart-1` (brand green).
 
 ## Rules
 
@@ -111,9 +114,15 @@ define the tier:
 - **Single green accent.** `primary` is DataLeap brand green (#18A00D light /
   #5AC750 dark) and is the only accent hue in UI chrome — selection rings,
   toggles, active states. `destructive` red stays for destructive actions.
-  The `chart-*` greens appear ONLY inside charts, never in chrome (they are
-  brighter/yellower than `primary` — don't borrow them for selection states).
-  Everything else reads through neutral value contrast.
+  The `chart-*` hues appear ONLY inside charts and the avatar palette below,
+  never in chrome — don't borrow them for selection states, badges, or
+  buttons. Everything else reads through neutral value contrast.
+- **Avatar palette.** Avatars default to a neutral fill (`muted` background,
+  `foreground` initials). When color aids identification (member lists,
+  multi-user views), tint the background with a `chart-*` hue at low opacity
+  (~12–15%) and set the initials in that same hue's solid value; assign hues
+  by stable identity hash, in `chart-1..6` order. Squared corners (`radius-md`),
+  never circles; never a saturated solid fill behind initials.
 - **One radius knob.** All corner rounding derives from `--radius` (0.625rem)
   via the multiplier scale. Change the base, everything follows.
 - **Dark mode is a value flip** on the `.dark` class — same token names, no
