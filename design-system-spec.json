@@ -1,0 +1,18 @@
+{
+  "name": "shadcn/ui (stock)",
+  "description": "Unmodified stock shadcn/ui — base-nova style, neutral base color, Geist font, 60 components installed verbatim from the official registry via `shadcn add --all`.",
+  "framework": "react",
+  "language": "typescript",
+  "styling": "tailwind-v4-css-variables",
+  "tokens": {
+    "css": "src/index.css",
+    "notes": "Semantic CSS variables in :root (light) and .dark (dark). Radius scale derives from the single --radius base. Values are oklch."
+  },
+  "components": {
+    "directory": "src/components/ui",
+    "notes": "One file per component, stock shadcn source. Import alias: @/components/ui/<name>."
+  },
+  "utils": "src/lib/utils.ts",
+  "config": "components.json",
+  "designDoc": "DESIGN.md"
+}
