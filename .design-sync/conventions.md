@@ -26,6 +26,17 @@ Component variants come from props, never custom classes: `Button variant="outli
 
 **Avatars.** Default to a neutral fill (`--muted` background, `--foreground` initials). Only when color aids identification (member lists, multi-user views) tint the background with a `--chart-*` hue at ~12–15% opacity and set the initials in that same hue at full value, assigning hues in `--chart-1`…`--chart-6` order by a stable hash of the identity. There are no shipped `bg-chart-*` utility classes — write the tint inline, e.g. `style={{ background: "color-mix(in oklab, var(--chart-2) 15%, transparent)", color: "var(--chart-2)" }}`.
 
+## Design rules
+
+The system's own constraints — they hold for anything built with this kit.
+
+- **Semantic tokens only.** Colour always flows through the semantic variables (`--background`, `--muted-foreground`, `--border`, …). Never hard-code a hex or `oklch()` value in a component or a layout.
+- **One accent.** `--primary` (brand green) is the only accent hue in UI chrome — selection, toggles, active states, rings. `--destructive` is reserved for destructive actions. Everything else separates by neutral value contrast, not by colour.
+- **One radius knob.** All corner rounding derives from `--radius` (0.625rem); reach for `--radius-sm` / `--radius-md` rather than fixed pixel values.
+- **One typeface.** Geist Variable throughout — hierarchy comes from size and weight, never from a family change.
+- **Dark mode is a value flip.** The `.dark` class re-values the same token names; there is no parallel palette and no dark-only token. Dark borders and inputs are white at 10% / 15% alpha, not opaque grey.
+- **Density.** 4px spacing grid; controls are 36px tall by default and 32px in compact contexts; body text on dense data surfaces is 13–14px.
+
 ## Where the truth lives
 
 - `styles.css` → imports `fonts/fonts.css` (Geist @font-face) and `_ds_bundle.css` (all tokens under `:root` and `.dark`, plus every compiled component style). Read `_ds_bundle.css` before styling.

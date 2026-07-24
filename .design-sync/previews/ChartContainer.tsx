@@ -65,8 +65,8 @@ const revenueData = [
 ]
 
 const revenueConfig = {
-  revenue: { label: "Revenue", color: "var(--chart-3)" },
-  expenses: { label: "Expenses", color: "var(--chart-4)" },
+  revenue: { label: "Revenue", color: "var(--chart-1)" },
+  expenses: { label: "Expenses", color: "var(--chart-2)" },
 } satisfies ChartConfig
 
 export const AreaChartStacked = () => (
