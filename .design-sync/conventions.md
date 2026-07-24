@@ -6,7 +6,7 @@
 - **Dark mode**: add class `dark` to any ancestor (usually the root element). `ThemeProvider` (localStorage-backed) ships in the bundle if you need a toggle.
 - This kit is built on **base-ui, not Radix**: compose triggers with the `render` prop, e.g. `<DialogTrigger render={<Button variant="outline" />}>Open</DialogTrigger>` — there is **no `asChild`**.
 - **Menu labels must be wrapped in a group**: a bare `DropdownMenuLabel`/`ContextMenuLabel`/`MenubarLabel` outside `*MenuGroup`/`*MenuRadioGroup` throws and blanks the whole tree. Always `<DropdownMenuGroup><DropdownMenuLabel>…</DropdownMenuLabel>…</DropdownMenuGroup>`.
-- Charts: give the recharts element **explicit `width`/`height`** inside `ChartContainer` and set `isAnimationActive={false}` on series; pass `ChartTooltipContent`/`ChartLegendContent` as the `content` of recharts' own `Tooltip`/`Legend`.
+- Charts: give the recharts element **explicit `width`/`height`** inside `ChartContainer` and set `isAnimationActive={false}` on series; pass `ChartTooltipContent`/`ChartLegendContent` as the `content` of recharts' own `Tooltip`/`Legend`. Color series with `var(--chart-1)`…`var(--chart-5)`.
 - `ResizablePanelGroup` uses `orientation="vertical"` (react-resizable-panels v4 renamed `direction`).
 
 ## Styling idiom
@@ -17,7 +17,7 @@ Token vocabulary (each `--x` has a `--x-foreground` partner where noted; all are
 
 - Surfaces: `--background`, `--card`+fg, `--popover`+fg, `--sidebar`(+fg/-primary/-accent/-border/-ring)
 - Semantic: `--primary`+fg, `--secondary`+fg, `--muted`+fg, `--accent`+fg, `--destructive`, `--border`, `--input`, `--ring`
-- Charts: `--chart-1`…`--chart-5` (grayscale oklch **by design** in this stock kit — gray charts are correct)
+- Charts: `--chart-1`…`--chart-5` (a lime-green oklch scale, light → dark)
 - Shape/type: `--radius` (plus `--radius-sm|md|lg|xl`), `--font-sans` / `--font-heading` = "Geist Variable"
 
 Example glue: `style={{ display: "grid", gap: 12, background: "var(--muted)", borderRadius: "var(--radius)" }}`.
