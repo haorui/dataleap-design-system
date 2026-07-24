@@ -121,8 +121,8 @@ define the tier:
   `foreground` initials). When color aids identification (member lists,
   multi-user views), tint the background with a `chart-*` hue at low opacity
   (~12–15%) and set the initials in that same hue's solid value; assign hues
-  by stable identity hash, in `chart-1..6` order. Squared corners (`radius-md`),
-  never circles; never a saturated solid fill behind initials.
+  by stable identity hash, in `chart-1..6` order. Shape and fill weight follow
+  the stock component (`rounded-full`); the palette rule constrains hue only.
 - **One radius knob.** All corner rounding derives from `--radius` (0.625rem)
   via the multiplier scale. Change the base, everything follows.
 - **Dark mode is a value flip** on the `.dark` class — same token names, no
