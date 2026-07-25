@@ -18,7 +18,7 @@ Token vocabulary (each `--x` has a `--x-foreground` partner where noted; all are
 - Surfaces: `--background`, `--card`+fg, `--popover`+fg, `--sidebar`(+fg/-primary/-accent/-border/-ring)
 - Semantic: `--primary`+fg, `--secondary`+fg, `--muted`+fg, `--accent`+fg, `--destructive`, `--border`, `--input`, `--ring`
 - Charts: `--chart-1`…`--chart-6` — a six-color categorical scale: green (brand) / blue / amber / violet / rose / teal, ordered for adjacent distinctness. These hues belong **only** in charts — never in UI chrome (buttons, badges, selection states, rings), which accents through `--primary` alone.
-- Shape/type: `--radius` (0.625rem) plus `--radius-sm` and `--radius-md` — those three are all the shipped stylesheet defines, so only they resolve. `--font-sans` / `--font-heading` = "Geist Variable"
+- Shape/type: `--radius` (0.625rem) plus `--radius-sm`, `--radius-md` and `--radius-lg` — those four are all the shipped stylesheet defines, so only they resolve (`--radius-xl` and up are tree-shaken out). `--font-sans` / `--font-heading` = "Geist Variable"
 
 Example glue: `style={{ display: "grid", gap: 12, background: "var(--muted)", borderRadius: "var(--radius)" }}`.
 
