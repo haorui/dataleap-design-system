@@ -1,5 +1,5 @@
 ---
-name: leap-aide shadcn (tier-2)
+name: dataleap-design-system
 description: >
   shadcn/ui skeleton with the DataLeap brand pinned on top — stock neutral
   surfaces and Geist typeface, brand-green primary, six-color categorical
@@ -92,7 +92,7 @@ components:
   count: 60
 ---
 
-# leap-aide shadcn — tier-2 design system
+# DataLeap design system
 
 A shadcn/ui skeleton (`shadcn init` base-nova + `add --all`, components
 verbatim) with the DataLeap brand pinned on top. Three adjudicated choices
@@ -101,7 +101,7 @@ define the tier:
 - **Typeface: Geist** (stock) — not Plus Jakarta Sans.
 - **Neutrals: stock oklch** — surfaces, borders, muted text all keep shadcn's
   achromatic scale.
-- **Charts: the leap-aide six-color categorical scale** (`chart-1..6` —
+- **Charts: the DataLeap six-color categorical scale** (`chart-1..6` —
   brand green first, then blue / amber / violet / rose / teal, ordered for
   adjacent distinctness). Multi-series charts assign hues in token order;
   single-series charts just use `chart-1` (brand green).

@@ -1,6 +1,6 @@
-# React + TypeScript + Vite + shadcn/ui
+# dataleap-design-system
 
-This is a template for a new Vite project with React, TypeScript, and shadcn/ui.
+The DataLeap company-wide design system — a shadcn/ui skeleton with the DataLeap brand pinned on top, shared across DataLeap products (leap-aide is the first adopter). Synced to Claude Design via /design-sync.
 
 ## Adding components
 
