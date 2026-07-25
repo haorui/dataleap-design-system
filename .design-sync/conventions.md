@@ -17,14 +17,14 @@ Token vocabulary (each `--x` has a `--x-foreground` partner where noted; all are
 
 - Surfaces: `--background`, `--card`+fg, `--popover`+fg, `--sidebar`(+fg/-primary/-accent/-border/-ring)
 - Semantic: `--primary`+fg, `--secondary`+fg, `--muted`+fg, `--accent`+fg, `--destructive`, `--border`, `--input`, `--ring`
-- Charts: `--chart-1`…`--chart-6` — a six-color categorical scale: green (brand) / blue / amber / violet / rose / teal, ordered for adjacent distinctness. These hues belong **only** in charts and the avatar tint below — never in UI chrome (buttons, badges, selection states, rings), which accents through `--primary` alone.
+- Charts: `--chart-1`…`--chart-6` — a six-color categorical scale: green (brand) / blue / amber / violet / rose / teal, ordered for adjacent distinctness. These hues belong **only** in charts — never in UI chrome (buttons, badges, selection states, rings), which accents through `--primary` alone.
 - Shape/type: `--radius` (0.625rem) plus `--radius-sm` and `--radius-md` — those three are all the shipped stylesheet defines, so only they resolve. `--font-sans` / `--font-heading` = "Geist Variable"
 
 Example glue: `style={{ display: "grid", gap: 12, background: "var(--muted)", borderRadius: "var(--radius)" }}`.
 
 Component variants come from props, never custom classes: `Button variant="outline" size="sm"`, `Badge variant="destructive"`, `Alert variant="destructive"`, `Card size="sm"`, `Tabs variant="line"`. Mark button icons with `data-icon="inline-start"`/`"inline-end"` for correct padding.
 
-**Avatars.** Default to a neutral fill (`--muted` background, `--foreground` initials). Only when color aids identification (member lists, multi-user views) tint the background with a `--chart-*` hue at ~12–15% opacity and set the initials in that same hue at full value, assigning hues in `--chart-1`…`--chart-6` order by a stable hash of the identity. There are no shipped `bg-chart-*` utility classes — write the tint inline, e.g. `style={{ background: "color-mix(in oklab, var(--chart-2) 15%, transparent)", color: "var(--chart-2)" }}`.
+**Avatars stay stock.** Neutral fill only — `--muted` background, `--foreground` initials, `rounded-full`. Don't tint them with `--chart-*` hues; identity reads from the initials or image, not from color.
 
 ## Design rules
 
