@@ -114,15 +114,10 @@ define the tier:
 - **Single green accent.** `primary` is DataLeap brand green (#18A00D light /
   #5AC750 dark) and is the only accent hue in UI chrome — selection rings,
   toggles, active states. `destructive` red stays for destructive actions.
-  The `chart-*` hues appear ONLY inside charts and the avatar palette below,
-  never in chrome — don't borrow them for selection states, badges, or
-  buttons. Everything else reads through neutral value contrast.
-- **Avatar palette.** Avatars default to a neutral fill (`muted` background,
-  `foreground` initials). When color aids identification (member lists,
-  multi-user views), tint the background with a `chart-*` hue at low opacity
-  (~12–15%) and set the initials in that same hue's solid value; assign hues
-  by stable identity hash, in `chart-1..6` order. Shape and fill weight follow
-  the stock component (`rounded-full`); the palette rule constrains hue only.
+  The `chart-*` hues appear ONLY inside charts, never in chrome — don't
+  borrow them for selection states, badges, or buttons. Everything else
+  reads through neutral value contrast. Avatars stay stock: neutral fill
+  (`muted` background, `foreground` initials), `rounded-full`.
 - **One radius knob.** All corner rounding derives from `--radius` (0.625rem)
   via the multiplier scale. Change the base, everything follows.
 - **Dark mode is a value flip** on the `.dark` class — same token names, no
