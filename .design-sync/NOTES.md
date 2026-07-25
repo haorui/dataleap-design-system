@@ -1,4 +1,4 @@
-# design-sync notes — shadcn-stock-design
+# design-sync notes — dataleap-design-system
 
 - This repo is a private Vite APP, not a library: no `main`/`module`/`exports`, no `.d.ts` build. The converter runs from a committed hand-made entry `.design-sync/entry.ts` (re-exports every `src/components/ui/*.tsx` family + theme-provider), passed via `cfg.entry`. If a new component file is added to `src/components/ui/`, regenerate/extend `entry.ts` AND add the family's primary export to `cfg.componentSrcMap`.
 - Component cards are ONE per shadcn family (59), pinned in `cfg.componentSrcMap`; the other ~280 subcomponent exports still ship in the bundle (357 exports on `window.ShadcnUI`) and are documented per-family in `.design-sync/ds-docs/`.

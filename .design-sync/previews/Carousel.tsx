@@ -4,7 +4,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 const slides = ["Aurora", "Basalt", "Cinder", "Dune", "Ember"]
 

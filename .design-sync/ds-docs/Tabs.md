@@ -14,7 +14,7 @@ Tabbed panels on the base-ui Tabs primitive, with pill (default) and underline (
 ## Usage
 
 ```tsx
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "shadcn-stock-design"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "dataleap-design-system"
 
 <Tabs defaultValue="overview">
   <TabsList>

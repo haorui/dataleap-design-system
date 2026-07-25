@@ -22,7 +22,7 @@ Modal dialog centered over a blurred backdrop, for focused tasks like editing or
 import {
   Button, Dialog, DialogClose, DialogContent, DialogDescription,
   DialogFooter, DialogHeader, DialogTitle, DialogTrigger,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 <Dialog>
   <DialogTrigger render={<Button variant="outline" />}>Edit profile</DialogTrigger>

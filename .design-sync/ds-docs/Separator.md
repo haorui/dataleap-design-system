@@ -11,7 +11,7 @@ Hairline divider on the border token, horizontal or vertical, built on the base-
 ## Usage
 
 ```tsx
-import { Separator } from "shadcn-stock-design"
+import { Separator } from "dataleap-design-system"
 
 export function Section() {
   return (

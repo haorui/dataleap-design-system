@@ -16,7 +16,7 @@ Hover-triggered preview card anchored to a link or trigger (base-ui PreviewCard)
 import {
   Avatar, AvatarFallback, Button,
   HoverCard, HoverCardContent, HoverCardTrigger,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 <HoverCard>
   <HoverCardTrigger render={<Button variant="link" />}>@nextjs</HoverCardTrigger>

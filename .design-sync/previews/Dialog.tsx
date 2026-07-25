@@ -10,7 +10,7 @@ import {
   DialogTrigger,
   Input,
   Label,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 export const EditProfileOpen = () => (
   <Dialog defaultOpen>

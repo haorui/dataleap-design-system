@@ -22,7 +22,7 @@ Panel that slides in from a screen edge over a blurred backdrop — for forms, n
 import {
   Button, Sheet, SheetClose, SheetContent, SheetDescription,
   SheetFooter, SheetHeader, SheetTitle, SheetTrigger,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 <Sheet>
   <SheetTrigger render={<Button variant="outline" />}>Edit profile</SheetTrigger>

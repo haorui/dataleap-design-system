@@ -22,7 +22,7 @@ import {
   InputGroupInput,
   InputGroupText,
   Kbd,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 import { SearchIcon } from "lucide-react"
 
 export function SearchField() {
@@ -47,7 +47,7 @@ import {
   InputGroupButton,
   InputGroupText,
   InputGroupTextarea,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 import { InfoIcon } from "lucide-react"
 
 export function FeedbackBox() {

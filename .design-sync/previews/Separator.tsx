@@ -1,4 +1,4 @@
-import { Separator } from "shadcn-stock-design"
+import { Separator } from "dataleap-design-system"
 
 export const Horizontal = () => (
   <div style={{ width: 300 }}>

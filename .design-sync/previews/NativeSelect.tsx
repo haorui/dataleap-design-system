@@ -2,7 +2,7 @@ import {
   NativeSelect,
   NativeSelectOptGroup,
   NativeSelectOption,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 export const Basic = () => (
   <NativeSelect defaultValue="engineering" style={{ width: 220 }}>

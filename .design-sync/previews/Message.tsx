@@ -10,7 +10,7 @@ import {
   MessageFooter,
   MessageGroup,
   MessageHeader,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 export const Conversation = () => (
   <MessageGroup style={{ maxWidth: 480, gap: 16 }}>

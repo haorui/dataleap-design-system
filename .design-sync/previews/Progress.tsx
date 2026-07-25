@@ -2,7 +2,7 @@ import {
   Progress,
   ProgressLabel,
   ProgressValue,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 export const Basic = () => (
   <div style={{ display: "grid", gap: 20, width: 360 }}>

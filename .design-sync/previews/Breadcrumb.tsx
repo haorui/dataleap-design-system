@@ -6,7 +6,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 import { Home, Slash } from "lucide-react"
 
 export const Basic = () => (

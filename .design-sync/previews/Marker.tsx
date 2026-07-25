@@ -1,4 +1,4 @@
-import { Marker, MarkerContent, MarkerIcon } from "shadcn-stock-design"
+import { Marker, MarkerContent, MarkerIcon } from "dataleap-design-system"
 import { CalendarIcon, GitCommitIcon, InfoIcon } from "lucide-react"
 
 export const Default = () => (

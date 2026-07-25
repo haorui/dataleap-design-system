@@ -1,4 +1,4 @@
-import { Label, Slider } from "shadcn-stock-design"
+import { Label, Slider } from "dataleap-design-system"
 
 export const Basic = () => (
   <div style={{ display: "flex", flexDirection: "column", gap: 24, width: 320 }}>

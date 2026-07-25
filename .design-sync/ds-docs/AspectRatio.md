@@ -11,7 +11,7 @@ Constrains a box to a fixed width/height ratio via the CSS `aspect-ratio` proper
 ## Usage
 
 ```tsx
-import { AspectRatio } from "shadcn-stock-design"
+import { AspectRatio } from "dataleap-design-system"
 
 export function Thumbnail() {
   return (

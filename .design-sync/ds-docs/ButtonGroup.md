@@ -14,7 +14,7 @@ Fuses adjacent buttons, inputs, selects, and text labels into a single segmented
 ## Usage
 
 ```tsx
-import { Button, ButtonGroup, ButtonGroupSeparator } from "shadcn-stock-design"
+import { Button, ButtonGroup, ButtonGroupSeparator } from "dataleap-design-system"
 import { ChevronDownIcon } from "lucide-react"
 
 export function MergeSplitButton() {
@@ -31,7 +31,7 @@ export function MergeSplitButton() {
 ```
 
 ```tsx
-import { Button, ButtonGroup, ButtonGroupText, Input } from "shadcn-stock-design"
+import { Button, ButtonGroup, ButtonGroupText, Input } from "dataleap-design-system"
 import { SearchIcon } from "lucide-react"
 
 export function SearchBar() {

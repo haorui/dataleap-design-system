@@ -5,7 +5,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 import { PlusIcon } from "lucide-react"
 
 export const BasicOpen = () => (

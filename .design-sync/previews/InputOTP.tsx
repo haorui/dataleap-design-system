@@ -3,7 +3,7 @@ import {
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 export const Basic = () => (
   <InputOTP maxLength={6} value="481952" onChange={() => {}}>

@@ -3,7 +3,7 @@ import {
   ChartLegendContent,
   ChartTooltipContent,
   type ChartConfig,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 import {
   Area,
   AreaChart,

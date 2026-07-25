@@ -28,7 +28,7 @@ import {
   Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel,
   SidebarHeader, SidebarInset, SidebarMenu, SidebarMenuButton, SidebarMenuItem,
   SidebarProvider, SidebarTrigger,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 import { HomeIcon, InboxIcon } from "lucide-react"
 
 <SidebarProvider>

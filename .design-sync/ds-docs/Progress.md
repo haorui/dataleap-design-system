@@ -14,7 +14,7 @@ Determinate progress bar on the base-ui Progress primitive, with optional label 
 ## Usage
 
 ```tsx
-import { Progress, ProgressLabel, ProgressValue } from "shadcn-stock-design"
+import { Progress, ProgressLabel, ProgressValue } from "dataleap-design-system"
 
 <Progress value={60} className="w-90" />
 

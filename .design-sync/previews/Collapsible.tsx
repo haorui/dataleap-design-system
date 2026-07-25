@@ -6,7 +6,7 @@ import {
   Item,
   ItemContent,
   ItemTitle,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 import { ChevronsUpDown } from "lucide-react"
 
 export const Basic = () => (

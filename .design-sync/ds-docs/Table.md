@@ -20,7 +20,7 @@ Semantic data table with styled header, striped hover rows, footer band, and cap
 import {
   Table, TableBody, TableCaption, TableCell, TableFooter,
   TableHead, TableHeader, TableRow, Badge,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 <Table>
   <TableCaption>Recent invoices for the Acme workspace.</TableCaption>

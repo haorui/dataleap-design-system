@@ -11,7 +11,7 @@ Binary checkbox built on the base-ui Checkbox primitive; checked state fills wit
 ## Usage
 
 ```tsx
-import { Checkbox, Label } from "shadcn-stock-design"
+import { Checkbox, Label } from "dataleap-design-system"
 
 <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
   <Checkbox id="updates" defaultChecked />
@@ -20,7 +20,7 @@ import { Checkbox, Label } from "shadcn-stock-design"
 ```
 
 ```tsx
-import { Checkbox } from "shadcn-stock-design"
+import { Checkbox } from "dataleap-design-system"
 
 <Checkbox defaultChecked disabled aria-label="Locked setting" />
 <Checkbox aria-invalid="true" aria-label="Required consent" />

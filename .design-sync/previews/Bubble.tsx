@@ -3,7 +3,7 @@ import {
   BubbleContent,
   BubbleGroup,
   BubbleReactions,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 export const Conversation = () => (
   <div style={{ maxWidth: 420 }}>

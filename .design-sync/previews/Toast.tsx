@@ -10,7 +10,7 @@ import {
   ToastViewport,
   createToastManager,
   useToastManager,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 import { CircleCheckIcon, InfoIcon } from "lucide-react"
 
 // The Toast system is imperative (base-ui createToastManager). For a static

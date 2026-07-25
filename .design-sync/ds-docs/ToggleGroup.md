@@ -12,7 +12,7 @@ Group of toggle buttons (base-ui ToggleGroup) for single or multiple selection, 
 ## Usage
 
 ```tsx
-import { ToggleGroup, ToggleGroupItem } from "shadcn-stock-design"
+import { ToggleGroup, ToggleGroupItem } from "dataleap-design-system"
 import { BoldIcon, ItalicIcon, UnderlineIcon } from "lucide-react"
 
 // Multiple selection

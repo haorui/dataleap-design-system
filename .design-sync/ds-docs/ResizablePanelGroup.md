@@ -17,7 +17,7 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 export function SplitView() {
   return (

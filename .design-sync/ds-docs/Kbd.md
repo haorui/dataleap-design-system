@@ -12,7 +12,7 @@ Keyboard-key chip for documenting shortcuts, inline in prose or grouped into key
 ## Usage
 
 ```tsx
-import { Kbd, KbdGroup } from "shadcn-stock-design"
+import { Kbd, KbdGroup } from "dataleap-design-system"
 
 <KbdGroup>
   <Kbd>⌘</Kbd>

@@ -25,7 +25,7 @@ import {
   ChartLegend,
   ChartLegendContent,
   type ChartConfig,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 const config = {
   desktop: { label: "Desktop", color: "var(--chart-1)" },

@@ -14,7 +14,7 @@ Chat message bubble with seven color variants, start/end alignment, interactive 
 ## Usage
 
 ```tsx
-import { Bubble, BubbleContent, BubbleGroup, BubbleReactions } from "shadcn-stock-design"
+import { Bubble, BubbleContent, BubbleGroup, BubbleReactions } from "dataleap-design-system"
 
 <BubbleGroup>
   <Bubble variant="muted">

@@ -45,7 +45,7 @@ The system's own constraints — they hold for anything built with this kit.
 ## Idiomatic example
 
 ```tsx
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Button, Input, Label } from "shadcn-stock-design"
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Button, Input, Label } from "dataleap-design-system"
 
 <Card style={{ width: 360 }}>
   <CardHeader>

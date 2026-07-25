@@ -7,7 +7,7 @@ import {
   SelectSeparator,
   SelectTrigger,
   SelectValue,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 const fruits = [
   { value: "apple", label: "Apple" },

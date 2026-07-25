@@ -1,4 +1,4 @@
-import { Button } from "shadcn-stock-design"
+import { Button } from "dataleap-design-system"
 import { ArrowRight, Loader2, Plus, Trash2 } from "lucide-react"
 
 export const Variants = () => (

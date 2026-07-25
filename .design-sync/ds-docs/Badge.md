@@ -12,7 +12,7 @@ Compact pill label for statuses, counts, and metadata. Variants: `default`, `sec
 ## Usage
 
 ```tsx
-import { Badge } from "shadcn-stock-design"
+import { Badge } from "dataleap-design-system"
 import { BadgeCheck } from "lucide-react"
 
 <Badge variant="secondary">Draft</Badge>

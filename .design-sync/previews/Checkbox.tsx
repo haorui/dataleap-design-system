@@ -1,4 +1,4 @@
-import { Checkbox, Label } from "shadcn-stock-design"
+import { Checkbox, Label } from "dataleap-design-system"
 
 export const States = () => (
   <div style={{ display: "flex", gap: 24, alignItems: "center" }}>

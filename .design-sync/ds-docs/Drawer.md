@@ -23,7 +23,7 @@ Swipeable drawer that slides from a screen edge, with optional snap points and g
 import {
   Button, Drawer, DrawerClose, DrawerContent, DrawerDescription,
   DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 <Drawer showSwipeHandle>
   <DrawerTrigger render={<Button variant="outline" />}>Open drawer</DrawerTrigger>

@@ -1,4 +1,4 @@
-import { Label, RadioGroup, RadioGroupItem } from "shadcn-stock-design"
+import { Label, RadioGroup, RadioGroupItem } from "dataleap-design-system"
 
 export const Basic = () => (
   <RadioGroup defaultValue="comfortable" style={{ width: 260 }}>

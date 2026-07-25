@@ -4,7 +4,7 @@ import {
   AlertDescription,
   AlertTitle,
   Button,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 import { CheckCircle2Icon, InfoIcon, OctagonAlertIcon } from "lucide-react"
 
 export const Default = () => (

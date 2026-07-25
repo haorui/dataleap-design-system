@@ -6,7 +6,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 export const Basic = () => (
   <Pagination>

@@ -16,7 +16,7 @@ Small inverted label with arrow shown on hover/focus; requires a `TooltipProvide
 ```tsx
 import {
   Button, Kbd, Tooltip, TooltipContent, TooltipProvider, TooltipTrigger,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 <TooltipProvider>
   <Tooltip>

@@ -23,7 +23,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 export function Gallery() {
   return (

@@ -22,7 +22,7 @@ File-attachment chip for chat composers and message threads, with upload lifecyc
 import {
   Attachment, AttachmentGroup, AttachmentMedia, AttachmentContent,
   AttachmentTitle, AttachmentDescription, AttachmentActions, AttachmentAction,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 import { FileTextIcon, XIcon } from "lucide-react"
 
 <AttachmentGroup>

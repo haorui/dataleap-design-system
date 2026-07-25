@@ -19,7 +19,7 @@ Message row layout for chat threads: avatar, header, bubble content, and footer,
 import {
   Avatar, AvatarFallback, Bubble, BubbleContent, BubbleGroup,
   Message, MessageAvatar, MessageContent, MessageFooter, MessageGroup, MessageHeader,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 <MessageGroup>
   <Message>

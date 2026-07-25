@@ -10,7 +10,7 @@ import {
   ComboboxList,
   ComboboxValue,
   useComboboxAnchor,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 const frameworks = ["Next.js", "SvelteKit", "Nuxt", "Remix", "Astro"]
 

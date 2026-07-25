@@ -1,4 +1,4 @@
-import { Toggle } from "shadcn-stock-design"
+import { Toggle } from "dataleap-design-system"
 import { BoldIcon, BookmarkIcon, ItalicIcon, PinIcon, WifiIcon } from "lucide-react"
 
 export const Basic = () => (

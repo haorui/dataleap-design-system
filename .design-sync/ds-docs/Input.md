@@ -11,7 +11,7 @@ Single-line text field built on the base-ui Input primitive; supports all native
 ## Usage
 
 ```tsx
-import { Input, Label } from "shadcn-stock-design"
+import { Input, Label } from "dataleap-design-system"
 
 <div style={{ display: "flex", flexDirection: "column", gap: 6, width: 320 }}>
   <Label htmlFor="workspace">Workspace name</Label>
@@ -20,7 +20,7 @@ import { Input, Label } from "shadcn-stock-design"
 ```
 
 ```tsx
-import { Input } from "shadcn-stock-design"
+import { Input } from "dataleap-design-system"
 
 <Input defaultValue="not-an-email" aria-invalid="true" />
 <Input placeholder="Disabled field" disabled />

@@ -12,7 +12,7 @@ Two-state pressed/unpressed button (base-ui Toggle) for options like bold, pin, 
 ## Usage
 
 ```tsx
-import { Toggle } from "shadcn-stock-design"
+import { Toggle } from "dataleap-design-system"
 import { BoldIcon, WifiIcon } from "lucide-react"
 
 <Toggle defaultPressed aria-label="Toggle bold">

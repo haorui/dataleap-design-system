@@ -11,7 +11,7 @@ Slider built on the base-ui Slider primitive; value is an array — one entry pe
 ## Usage
 
 ```tsx
-import { Label, Slider } from "shadcn-stock-design"
+import { Label, Slider } from "dataleap-design-system"
 
 <div style={{ display: "flex", flexDirection: "column", gap: 10, width: 320 }}>
   <Label htmlFor="volume">Notification volume</Label>
@@ -20,7 +20,7 @@ import { Label, Slider } from "shadcn-stock-design"
 ```
 
 ```tsx
-import { Slider } from "shadcn-stock-design"
+import { Slider } from "dataleap-design-system"
 
 // two-thumb range slider
 <Slider defaultValue={[200, 650]} min={0} max={1000} step={10} />

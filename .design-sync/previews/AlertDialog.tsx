@@ -10,7 +10,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
   Button,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 import { Trash2Icon } from "lucide-react"
 
 export const DeleteProjectOpen = () => (

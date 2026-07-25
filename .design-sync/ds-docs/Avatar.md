@@ -16,7 +16,7 @@ Circular user avatar with image, fallback initials, status badge, and overlappin
 ## Usage
 
 ```tsx
-import { Avatar, AvatarBadge, AvatarFallback, AvatarImage } from "shadcn-stock-design"
+import { Avatar, AvatarBadge, AvatarFallback, AvatarImage } from "dataleap-design-system"
 
 <Avatar size="lg">
   <AvatarImage src="/avatars/haorui.png" alt="Haorui Li" />
@@ -26,7 +26,7 @@ import { Avatar, AvatarBadge, AvatarFallback, AvatarImage } from "shadcn-stock-d
 ```
 
 ```tsx
-import { Avatar, AvatarFallback, AvatarGroup, AvatarGroupCount } from "shadcn-stock-design"
+import { Avatar, AvatarFallback, AvatarGroup, AvatarGroupCount } from "dataleap-design-system"
 
 <AvatarGroup>
   <Avatar><AvatarFallback>HL</AvatarFallback></Avatar>
