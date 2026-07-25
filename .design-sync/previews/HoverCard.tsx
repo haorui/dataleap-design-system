@@ -5,7 +5,7 @@ import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 import { CalendarDaysIcon } from "lucide-react"
 
 export const ProfilePreviewOpen = () => (

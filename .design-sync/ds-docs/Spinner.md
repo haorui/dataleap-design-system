@@ -10,7 +10,7 @@ Spinning loading indicator — a lucide Loader2 icon with `animate-spin`, 16px b
 ## Usage
 
 ```tsx
-import { Button, Spinner } from "shadcn-stock-design"
+import { Button, Spinner } from "dataleap-design-system"
 
 <Spinner />
 <Spinner className="size-6" />

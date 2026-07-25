@@ -11,7 +11,7 @@ Clickable action trigger with six visual variants and nine sizes, built on the b
 ## Usage
 
 ```tsx
-import { Button } from "shadcn-stock-design"
+import { Button } from "dataleap-design-system"
 import { ArrowRight, Trash2 } from "lucide-react"
 
 <Button>Save changes</Button>

@@ -14,7 +14,7 @@ Inline annotation row for timelines and message streams — an icon plus muted t
 ## Usage
 
 ```tsx
-import { Marker, MarkerContent, MarkerIcon } from "shadcn-stock-design"
+import { Marker, MarkerContent, MarkerIcon } from "dataleap-design-system"
 import { CalendarIcon, GitCommitIcon } from "lucide-react"
 
 export function Timeline() {

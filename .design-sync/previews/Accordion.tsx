@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 export const Basic = () => (
   <Accordion defaultValue={["shipping"]} style={{ width: 420 }}>

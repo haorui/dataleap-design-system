@@ -10,7 +10,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 export const RightSideOpen = () => (
   <Sheet defaultOpen>

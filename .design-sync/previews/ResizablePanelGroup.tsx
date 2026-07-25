@@ -3,7 +3,7 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 const panelStyle: React.CSSProperties = {
   display: "flex",

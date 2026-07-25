@@ -20,7 +20,7 @@ Flexible list-row primitive: media + content + actions in one row, with optional
 ## Usage
 
 ```tsx
-import { Button, Item, ItemActions, ItemContent, ItemDescription, ItemMedia, ItemTitle } from "shadcn-stock-design"
+import { Button, Item, ItemActions, ItemContent, ItemDescription, ItemMedia, ItemTitle } from "dataleap-design-system"
 import { Globe } from "lucide-react"
 
 <Item variant="outline">
@@ -38,7 +38,7 @@ import { Globe } from "lucide-react"
 ```
 
 ```tsx
-import { Item, ItemContent, ItemGroup, ItemSeparator, ItemTitle } from "shadcn-stock-design"
+import { Item, ItemContent, ItemGroup, ItemSeparator, ItemTitle } from "dataleap-design-system"
 
 <ItemGroup>
   <Item><ItemContent><ItemTitle>First</ItemTitle></ItemContent></Item>

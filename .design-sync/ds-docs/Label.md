@@ -11,7 +11,7 @@ Form field label (`text-sm font-medium`, flex row with `gap-2`); dims automatica
 ## Usage
 
 ```tsx
-import { Input, Label } from "shadcn-stock-design"
+import { Input, Label } from "dataleap-design-system"
 
 <div style={{ display: "flex", flexDirection: "column", gap: 6, width: 320 }}>
   <Label htmlFor="email">Work email</Label>
@@ -20,7 +20,7 @@ import { Input, Label } from "shadcn-stock-design"
 ```
 
 ```tsx
-import { Checkbox, Label } from "shadcn-stock-design"
+import { Checkbox, Label } from "dataleap-design-system"
 
 <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
   <Checkbox id="remember" defaultChecked />

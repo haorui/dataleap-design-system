@@ -14,7 +14,7 @@ Vertically stacked expandable sections built on Base UI Accordion; each trigger 
 ## Usage
 
 ```tsx
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "shadcn-stock-design"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "dataleap-design-system"
 
 <Accordion defaultValue={["shipping"]}>
   <AccordionItem value="shipping">

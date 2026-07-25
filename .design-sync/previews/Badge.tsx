@@ -1,4 +1,4 @@
-import { Badge } from "shadcn-stock-design"
+import { Badge } from "dataleap-design-system"
 import { AlertCircle, ArrowUpRight, BadgeCheck, Clock } from "lucide-react"
 
 export const Variants = () => (

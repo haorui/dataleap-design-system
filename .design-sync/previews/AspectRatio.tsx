@@ -1,4 +1,4 @@
-import { AspectRatio } from "shadcn-stock-design"
+import { AspectRatio } from "dataleap-design-system"
 
 export const Widescreen = () => (
   <div style={{ width: 320 }}>

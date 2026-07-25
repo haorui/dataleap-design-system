@@ -19,7 +19,7 @@ Layout primitives for form fields: label, description, error, grouping, legends,
 ## Usage
 
 ```tsx
-import { Field, FieldDescription, FieldLabel, Input } from "shadcn-stock-design"
+import { Field, FieldDescription, FieldLabel, Input } from "dataleap-design-system"
 
 export function UsernameField() {
   return (
@@ -35,7 +35,7 @@ export function UsernameField() {
 ```
 
 ```tsx
-import { Field, FieldError, FieldLabel, Input } from "shadcn-stock-design"
+import { Field, FieldError, FieldLabel, Input } from "dataleap-design-system"
 
 export function EmailField() {
   return (

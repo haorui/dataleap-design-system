@@ -6,7 +6,7 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 import { FolderOpen, Inbox, Plus } from "lucide-react"
 
 export const Basic = () => (

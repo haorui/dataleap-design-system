@@ -1,4 +1,4 @@
-import { ToggleGroup, ToggleGroupItem } from "shadcn-stock-design"
+import { ToggleGroup, ToggleGroupItem } from "dataleap-design-system"
 import {
   AlignCenterIcon,
   AlignLeftIcon,

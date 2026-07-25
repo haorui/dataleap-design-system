@@ -12,7 +12,7 @@ Single-choice option group built on base-ui Radio/RadioGroup; the group is a `gr
 ## Usage
 
 ```tsx
-import { Label, RadioGroup, RadioGroupItem } from "shadcn-stock-design"
+import { Label, RadioGroup, RadioGroupItem } from "dataleap-design-system"
 
 <RadioGroup defaultValue="comfortable" style={{ width: 260 }}>
   <div style={{ display: "flex", gap: 8, alignItems: "center" }}>

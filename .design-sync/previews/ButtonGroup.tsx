@@ -4,7 +4,7 @@ import {
   ButtonGroupSeparator,
   ButtonGroupText,
   Input,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 import {
   BoldIcon,
   ChevronDownIcon,

@@ -11,7 +11,7 @@ import {
   ItemMedia,
   ItemSeparator,
   ItemTitle,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 import { ChevronRight, FileText, Globe, Shield } from "lucide-react"
 
 export const Basic = () => (

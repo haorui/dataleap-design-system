@@ -12,7 +12,7 @@ Date picker built on react-day-picker with single/range/multiple modes, dropdown
 ## Usage
 
 ```tsx
-import { Calendar } from "shadcn-stock-design"
+import { Calendar } from "dataleap-design-system"
 
 // Single date
 <Calendar

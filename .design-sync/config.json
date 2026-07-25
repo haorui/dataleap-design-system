@@ -1,7 +1,7 @@
 {
   "projectId": "54718ed9-fa54-4fa6-a506-fea4fed8070d",
   "shape": "package",
-  "pkg": "shadcn-stock-design",
+  "pkg": "dataleap-design-system",
   "entry": ".design-sync/entry.ts",
   "globalName": "ShadcnUI",
   "buildCmd": "pnpm build && mkdir -p .design-sync/.cache/css && cp dist/assets/*.woff2 .design-sync/.cache/css/ && sed 's|url(/assets/|url(./|g' dist/assets/index-*.css > .design-sync/.cache/css/app.css",

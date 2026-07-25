@@ -10,7 +10,7 @@ import {
   CardTitle,
   Input,
   Label,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 export const Basic = () => (
   <Card style={{ width: 360 }}>

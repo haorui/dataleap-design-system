@@ -11,7 +11,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 import {
   CreditCard,
   LogOut,

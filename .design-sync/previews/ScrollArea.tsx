@@ -1,4 +1,4 @@
-import { ScrollArea, ScrollBar, Separator } from "shadcn-stock-design"
+import { ScrollArea, ScrollBar, Separator } from "dataleap-design-system"
 
 const versions = Array.from(
   { length: 24 },

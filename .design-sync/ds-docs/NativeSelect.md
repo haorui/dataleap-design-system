@@ -17,7 +17,7 @@ import {
   NativeSelect,
   NativeSelectOptGroup,
   NativeSelectOption,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 export function CitySelect() {
   return (

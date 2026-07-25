@@ -7,7 +7,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 import {
   Calculator,
   Calendar,

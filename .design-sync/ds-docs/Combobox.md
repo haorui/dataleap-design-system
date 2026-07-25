@@ -30,7 +30,7 @@ import {
   ComboboxInput,
   ComboboxItem,
   ComboboxList,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 const frameworks = ["Next.js", "SvelteKit", "Nuxt", "Remix", "Astro"]
 
@@ -66,7 +66,7 @@ import {
   ComboboxList,
   ComboboxValue,
   useComboboxAnchor,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 export function LanguagePicker() {
   const anchor = useComboboxAnchor()

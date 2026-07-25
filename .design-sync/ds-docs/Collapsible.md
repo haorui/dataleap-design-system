@@ -13,7 +13,7 @@ Unstyled show/hide primitive (Base UI Collapsible) for toggling a single content
 ## Usage
 
 ```tsx
-import { Button, Collapsible, CollapsibleContent, CollapsibleTrigger } from "shadcn-stock-design"
+import { Button, Collapsible, CollapsibleContent, CollapsibleTrigger } from "dataleap-design-system"
 import { ChevronsUpDown } from "lucide-react"
 
 <Collapsible defaultOpen>

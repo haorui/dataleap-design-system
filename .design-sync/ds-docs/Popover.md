@@ -19,7 +19,7 @@ Click-triggered floating panel anchored to its trigger, for settings, forms, or 
 import {
   Button, Input, Label, Popover, PopoverContent,
   PopoverDescription, PopoverHeader, PopoverTitle, PopoverTrigger,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 <Popover>
   <PopoverTrigger render={<Button variant="outline" />}>Open popover</PopoverTrigger>

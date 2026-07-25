@@ -6,7 +6,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 const panelLink = (title: string, description: string) => (
   <NavigationMenuLink href="#">

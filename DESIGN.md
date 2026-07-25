@@ -1,5 +1,5 @@
 ---
-name: leap-aide shadcn (tier-2)
+name: dataleap-design-system
 description: >
   shadcn/ui skeleton with the DataLeap brand pinned on top — stock neutral
   surfaces and Geist typeface, brand-green primary, six-color categorical
@@ -92,7 +92,7 @@ components:
   count: 60
 ---
 
-# leap-aide shadcn — tier-2 design system
+# DataLeap design system
 
 A shadcn/ui skeleton (`shadcn init` base-nova + `add --all`, components
 verbatim) with the DataLeap brand pinned on top. Three adjudicated choices
@@ -101,7 +101,7 @@ define the tier:
 - **Typeface: Geist** (stock) — not Plus Jakarta Sans.
 - **Neutrals: stock oklch** — surfaces, borders, muted text all keep shadcn's
   achromatic scale.
-- **Charts: the leap-aide six-color categorical scale** (`chart-1..6` —
+- **Charts: the DataLeap six-color categorical scale** (`chart-1..6` —
   brand green first, then blue / amber / violet / rose / teal, ordered for
   adjacent distinctness). Multi-series charts assign hues in token order;
   single-series charts just use `chart-1` (brand green).
@@ -114,15 +114,10 @@ define the tier:
 - **Single green accent.** `primary` is DataLeap brand green (#18A00D light /
   #5AC750 dark) and is the only accent hue in UI chrome — selection rings,
   toggles, active states. `destructive` red stays for destructive actions.
-  The `chart-*` hues appear ONLY inside charts and the avatar palette below,
-  never in chrome — don't borrow them for selection states, badges, or
-  buttons. Everything else reads through neutral value contrast.
-- **Avatar palette.** Avatars default to a neutral fill (`muted` background,
-  `foreground` initials). When color aids identification (member lists,
-  multi-user views), tint the background with a `chart-*` hue at low opacity
-  (~12–15%) and set the initials in that same hue's solid value; assign hues
-  by stable identity hash, in `chart-1..6` order. Shape and fill weight follow
-  the stock component (`rounded-full`); the palette rule constrains hue only.
+  The `chart-*` hues appear ONLY inside charts, never in chrome — don't
+  borrow them for selection states, badges, or buttons. Everything else
+  reads through neutral value contrast. Avatars stay stock: neutral fill
+  (`muted` background, `foreground` initials), `rounded-full`.
 - **One radius knob.** All corner rounding derives from `--radius` (0.625rem)
   via the multiplier scale. Change the base, everything follows.
 - **Dark mode is a value flip** on the `.dark` class — same token names, no

@@ -20,7 +20,7 @@ Auto-scrolling chat viewport that pins to the newest message and shows a scroll-
 import {
   MessageScroller, MessageScrollerButton, MessageScrollerContent,
   MessageScrollerItem, MessageScrollerProvider, MessageScrollerViewport,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 <div style={{ height: 340 }}>
   <MessageScrollerProvider>

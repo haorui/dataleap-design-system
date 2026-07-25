@@ -18,7 +18,7 @@ Imperative toast notifications on base-ui's toast manager, with a stacked bottom
 ## Usage
 
 ```tsx
-import { Toaster, toast, Button } from "shadcn-stock-design"
+import { Toaster, toast, Button } from "dataleap-design-system"
 
 // once, near the root
 <Toaster />

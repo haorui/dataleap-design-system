@@ -10,7 +10,7 @@ Pulsing muted placeholder block for loading states; shape it entirely with class
 ## Usage
 
 ```tsx
-import { Skeleton } from "shadcn-stock-design"
+import { Skeleton } from "dataleap-design-system"
 
 <div className="flex items-center gap-3">
   <Skeleton className="size-12 rounded-full" />

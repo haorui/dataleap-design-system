@@ -1,4 +1,4 @@
-import { Calendar } from "shadcn-stock-design"
+import { Calendar } from "dataleap-design-system"
 
 export const SingleSelection = () => (
   <Calendar

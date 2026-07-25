@@ -12,7 +12,7 @@ Custom-styled scroll container (base-ui ScrollArea) with themed rounded thumbs r
 ## Usage
 
 ```tsx
-import { ScrollArea, ScrollBar } from "shadcn-stock-design"
+import { ScrollArea, ScrollBar } from "dataleap-design-system"
 
 export function ReleaseList() {
   return (

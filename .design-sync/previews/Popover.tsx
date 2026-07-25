@@ -9,7 +9,7 @@ import {
   PopoverHeader,
   PopoverTitle,
   PopoverTrigger,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 const centered: React.CSSProperties = {
   display: "flex",

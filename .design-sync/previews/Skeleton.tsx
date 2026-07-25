@@ -1,4 +1,4 @@
-import { Skeleton } from "shadcn-stock-design"
+import { Skeleton } from "dataleap-design-system"
 
 export const ProfileRow = () => (
   <div style={{ display: "flex", alignItems: "center", gap: 12, width: 320 }}>

@@ -5,7 +5,7 @@ import {
   AvatarGroup,
   AvatarGroupCount,
   AvatarImage,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 const avatarSvg = (bg: string, fg: string, initials: string) =>
   "data:image/svg+xml;utf8," +

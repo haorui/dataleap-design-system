@@ -8,7 +8,7 @@ import {
   AttachmentMedia,
   AttachmentTitle,
   Spinner,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 import {
   AlertCircleIcon,
   FileSpreadsheetIcon,

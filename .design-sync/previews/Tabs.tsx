@@ -3,7 +3,7 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 import { ChartLineIcon, SettingsIcon, UsersIcon } from "lucide-react"
 
 export const Default = () => (

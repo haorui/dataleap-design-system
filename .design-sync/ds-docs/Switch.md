@@ -11,7 +11,7 @@ Toggle switch built on the base-ui Switch primitive with two sizes (`sm`, `defau
 ## Usage
 
 ```tsx
-import { Label, Switch } from "shadcn-stock-design"
+import { Label, Switch } from "dataleap-design-system"
 
 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: 300 }}>
   <Label htmlFor="tfa">Two-factor authentication</Label>
@@ -20,7 +20,7 @@ import { Label, Switch } from "shadcn-stock-design"
 ```
 
 ```tsx
-import { Switch } from "shadcn-stock-design"
+import { Switch } from "dataleap-design-system"
 
 <Switch size="sm" defaultChecked aria-label="Beta features" />
 <Switch defaultChecked disabled aria-label="Managed by admin" />

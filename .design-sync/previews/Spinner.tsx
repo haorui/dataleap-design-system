@@ -1,4 +1,4 @@
-import { Button, Spinner } from "shadcn-stock-design"
+import { Button, Spinner } from "dataleap-design-system"
 
 export const Sizes = () => (
   <div style={{ display: "flex", alignItems: "center", gap: 24 }}>

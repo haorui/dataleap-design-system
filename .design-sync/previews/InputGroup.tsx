@@ -6,7 +6,7 @@ import {
   InputGroupText,
   InputGroupTextarea,
   Kbd,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 import { CopyIcon, CreditCardIcon, InfoIcon, SearchIcon } from "lucide-react"
 
 export const WithIcons = () => (
@@ -52,7 +52,7 @@ export const TextAddons = () => (
 export const WithButtons = () => (
   <div style={{ display: "grid", gap: 12, width: 360 }}>
     <InputGroup>
-      <InputGroupInput readOnly value="npm install shadcn-stock-design" />
+      <InputGroupInput readOnly value="npm install dataleap-design-system" />
       <InputGroupAddon align="inline-end">
         <InputGroupButton size="icon-xs" aria-label="Copy command">
           <CopyIcon />

@@ -19,7 +19,7 @@ import {
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 export function VerificationCode() {
   return (

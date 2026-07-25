@@ -1,4 +1,4 @@
-import { Kbd, KbdGroup } from "shadcn-stock-design"
+import { Kbd, KbdGroup } from "dataleap-design-system"
 
 export const Basic = () => (
   <div style={{ display: "flex", gap: 12, alignItems: "center" }}>

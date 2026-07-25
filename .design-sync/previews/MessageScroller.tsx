@@ -15,7 +15,7 @@ import {
   MessageScrollerItem,
   MessageScrollerProvider,
   MessageScrollerViewport,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 const thread = [
   { from: "them", name: "Priya", text: "Kicking off the design sync — agenda is in the doc." },

@@ -8,7 +8,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 const invoices = [
   { id: "INV-0041", status: "Paid", method: "Credit card", amount: "$250.00" },

@@ -1,4 +1,4 @@
-import { Input, Label } from "shadcn-stock-design"
+import { Input, Label } from "dataleap-design-system"
 
 export const Basic = () => (
   <div style={{ display: "flex", flexDirection: "column", gap: 12, width: 320 }}>

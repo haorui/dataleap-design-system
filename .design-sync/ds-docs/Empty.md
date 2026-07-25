@@ -16,7 +16,7 @@ Centered empty-state block for "nothing here yet" screens: media/icon, title, de
 ## Usage
 
 ```tsx
-import { Button, Empty, EmptyContent, EmptyDescription, EmptyHeader, EmptyMedia, EmptyTitle } from "shadcn-stock-design"
+import { Button, Empty, EmptyContent, EmptyDescription, EmptyHeader, EmptyMedia, EmptyTitle } from "dataleap-design-system"
 import { FolderOpen, Plus } from "lucide-react"
 
 <Empty>

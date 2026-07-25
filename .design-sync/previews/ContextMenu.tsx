@@ -13,7 +13,7 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 import { Copy, FolderInput, Pencil, Trash2 } from "lucide-react"
 
 // Static-capture glue: fire a real contextmenu event once so the menu opens

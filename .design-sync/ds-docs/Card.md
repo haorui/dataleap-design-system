@@ -19,7 +19,7 @@ Surface container with header, content, and footer slots; `size="sm"` tightens a
 import {
   Card, CardHeader, CardTitle, CardDescription, CardAction,
   CardContent, CardFooter, Badge, Button,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 <Card style={{ width: 360 }}>
   <CardHeader>

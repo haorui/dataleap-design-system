@@ -14,7 +14,7 @@ import {
   Input,
   Switch,
   Textarea,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 export const Basic = () => (
   <div style={{ width: 340 }}>

@@ -8,7 +8,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 export const BottomDrawerOpen = () => (
   <Drawer defaultOpen showSwipeHandle>

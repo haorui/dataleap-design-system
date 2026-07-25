@@ -13,7 +13,7 @@ Inline callout banner with icon slot, title, description, and an optional top-ri
 ## Usage
 
 ```tsx
-import { Alert, AlertAction, AlertDescription, AlertTitle, Button } from "shadcn-stock-design"
+import { Alert, AlertAction, AlertDescription, AlertTitle, Button } from "dataleap-design-system"
 import { CheckCircle2Icon, OctagonAlertIcon } from "lucide-react"
 
 <Alert>

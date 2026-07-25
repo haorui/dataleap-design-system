@@ -25,7 +25,7 @@ import {
   AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent,
   AlertDialogDescription, AlertDialogFooter, AlertDialogHeader,
   AlertDialogMedia, AlertDialogTitle, AlertDialogTrigger, Button,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 import { Trash2Icon } from "lucide-react"
 
 <AlertDialog>

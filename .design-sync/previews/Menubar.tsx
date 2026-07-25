@@ -12,7 +12,7 @@ import {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarTrigger,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 
 export const FileMenuOpen = () => (
   <div style={{ minHeight: 300, paddingBottom: 8 }}>

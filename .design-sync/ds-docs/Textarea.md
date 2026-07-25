@@ -11,7 +11,7 @@ Multi-line text field that auto-grows with its content (`field-sizing-content`, 
 ## Usage
 
 ```tsx
-import { Label, Textarea } from "shadcn-stock-design"
+import { Label, Textarea } from "dataleap-design-system"
 
 <div style={{ display: "flex", flexDirection: "column", gap: 6, width: 360 }}>
   <Label htmlFor="notes">Release notes</Label>
@@ -20,7 +20,7 @@ import { Label, Textarea } from "shadcn-stock-design"
 ```
 
 ```tsx
-import { Textarea } from "shadcn-stock-design"
+import { Textarea } from "dataleap-design-system"
 
 <Textarea defaultValue="Summary is too short" aria-invalid="true" />
 ```

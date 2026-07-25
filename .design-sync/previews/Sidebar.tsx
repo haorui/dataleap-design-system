@@ -19,7 +19,7 @@ import {
   SidebarProvider,
   SidebarSeparator,
   SidebarTrigger,
-} from "shadcn-stock-design"
+} from "dataleap-design-system"
 import {
   FolderIcon,
   HomeIcon,
