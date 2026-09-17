@@ -26,6 +26,9 @@ export const CustomValueFormat = () => (
   </Progress>
 )
 
+// The two `[&_[data-slot=progress-indicator]]:bg-*` classes below are used on
+// purpose: previews are scanned by Tailwind, and this is what ships the
+// threshold-recolor utilities in the bundle CSS (see NOTES.md, css ordering).
 export const UsageThreshold = () => (
   <div style={{ display: "grid", gap: 20, width: 360 }}>
     <Progress
