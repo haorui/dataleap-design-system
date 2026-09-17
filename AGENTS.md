@@ -48,7 +48,7 @@ Lesson recorded from #6 / #7: the status tokens and the Badge / Alert variants b
 
 ## Design sync
 
-- Run only from a checkout that has `.ds-sync/`, after merge: `node .ds-sync/resync.mjs --config .design-sync/config.json --node-modules <path> --out ./ds-bundle` (full usage in the header of `.ds-sync/resync.mjs`). Any `.md` left in `.design-sync/learnings/` fails the verdict: fold its content into `NOTES.md`, then delete the file, then run. Exit 0 means the mechanical stages passed; grading and downstream upload are separate.
+- Run only from a checkout that has `.ds-sync/`, after merge, in two steps. **First run the config's `buildCmd` yourself** (`bash -c "$(node -e 'console.log(JSON.parse(require("fs").readFileSync(".design-sync/config.json","utf8")).buildCmd)')"`): the sync tooling never executes `buildCmd`; it only copies whatever `.design-sync/.cache/css/app.css` already holds, so skipping this step ships stale CSS with a green verdict (happened 2026-09-17). Then `node .ds-sync/resync.mjs --config .design-sync/config.json --node-modules ./node_modules --out ./ds-bundle` (full usage in the header of `.ds-sync/resync.mjs`). If the verdict shows `[RENDER_SKIPPED]` with a missing Playwright executable, run `npx playwright install chromium` inside `.ds-sync/` and re-run; expected warns are `[TOKENS_MISSING]` (12 runtime vars) and `[GRID_OVERFLOW]` on Progress only. Any `.md` left in `.design-sync/learnings/` fails the verdict: fold its content into `NOTES.md`, then delete the file, then run. Exit 0 means the mechanical stages passed; grading and downstream upload are separate.
 - Record findings in `.design-sync/NOTES.md`; it is the sync log, not a rule doc.
 
 ## Branches and PRs
