@@ -34,6 +34,7 @@ Lesson recorded from #6 / #7: the status tokens and the Badge / Alert variants b
 ## Adding or changing components
 
 - Add stock components with `npx shadcn@latest add <name>` (style `base-nova`, icon library lucide, `components.json`). Then, by hand: add `export * from "@/components/ui/<name>"` to `.design-sync/entry.ts` (it is not auto-generated and silently misses new files), write `.design-sync/ds-docs/<Name>.md` and `.design-sync/previews/<Name>.tsx`, and add a new family to `componentSrcMap` in `.design-sync/config.json`.
+- Previews are scanned by Tailwind, so a class used only in a preview still reaches the bundle. Prefer inline styles for layout glue; using a utility on purpose to ship a usage recipe is fine, just leave a comment saying so.
 - The primitives are **base-ui, not Radix**: compose with `render={<Button />}`, not `asChild`; Tooltip needs `TooltipProvider`; a bare `*MenuLabel` outside a `*MenuGroup` blanks the whole React root. More preview recipes in `.design-sync/NOTES.md`.
 
 ## Adding a token
