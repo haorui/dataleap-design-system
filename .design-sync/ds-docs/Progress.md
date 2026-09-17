@@ -30,3 +30,19 @@ import { Progress, ProgressLabel, ProgressValue } from "dataleap-design-system"
   <ProgressValue>{(_, value) => `${value} GB of 100 GB`}</ProgressValue>
 </Progress>
 ```
+
+Usage thresholds recolor the whole indicator through a descendant selector on `[data-slot=progress-indicator]`:
+
+```tsx
+<Progress value={72} className="[&_[data-slot=progress-indicator]]:bg-warning">
+  <ProgressLabel>Approaching limit</ProgressLabel>
+  <ProgressValue />
+</Progress>
+
+<Progress value={96} className="[&_[data-slot=progress-indicator]]:bg-destructive">
+  <ProgressLabel>Critical usage</ProgressLabel>
+  <ProgressValue />
+</Progress>
+```
+
+This pattern is for a whole-indicator recolor only; multi-segment bars with partially colored sections are explicitly out of scope.

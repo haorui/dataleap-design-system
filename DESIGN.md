@@ -22,6 +22,13 @@ colors:
     accent: "oklch(0.97 0 0)"
     accent-foreground: "oklch(0.205 0 0)"
     destructive: "oklch(0.577 0.245 27.325)"
+    info: "#1D4ED8"
+    info-foreground: "#FFFFFF"
+    success: "#047857"
+    success-foreground: "#FFFFFF"
+    warning: "#9A4A0B"
+    warning-foreground: "#FFFFFF"
+    destructive-foreground: "#FFFFFF"
     border: "oklch(0.922 0 0)"
     input: "oklch(0.922 0 0)"
     ring: "oklch(0.708 0 0)"
@@ -55,6 +62,13 @@ colors:
     accent: "oklch(0.269 0 0)"
     accent-foreground: "oklch(0.985 0 0)"
     destructive: "oklch(0.704 0.191 22.216)"
+    info: "#60A5FA"
+    info-foreground: "#0A0A0A"
+    success: "#34D399"
+    success-foreground: "#0A0A0A"
+    warning: "#FBBF24"
+    warning-foreground: "#0A0A0A"
+    destructive-foreground: "#0A0A0A"
     border: "oklch(1 0 0 / 10%)"
     input: "oklch(1 0 0 / 15%)"
     ring: "oklch(0.556 0 0)"
@@ -94,9 +108,10 @@ components:
 
 # DataLeap design system
 
-A shadcn/ui skeleton (`shadcn init` base-nova + `add --all`, components
-verbatim) with the DataLeap brand pinned on top. Three adjudicated choices
-define the tier:
+A shadcn/ui skeleton (`shadcn init` base-nova + `add --all`) with Badge, Alert,
+and AvatarBadge carrying local variant additions; everything else is still
+verbatim shadcn source, with the DataLeap brand pinned on top. Three adjudicated
+choices define the tier:
 
 - **Typeface: Geist** (stock) — not Plus Jakarta Sans.
 - **Neutrals: stock oklch** — surfaces, borders, muted text all keep shadcn's
@@ -111,13 +126,34 @@ define the tier:
 - **Semantic tokens only.** Color always flows through the semantic variables
   (`bg-background`, `text-muted-foreground`, `border-border`, …). Never
   hard-code hex/oklch values in components or layouts.
-- **Single green accent.** `primary` is DataLeap brand green (#18A00D light /
-  #5AC750 dark) and is the only accent hue in UI chrome — selection rings,
-  toggles, active states. `destructive` red stays for destructive actions.
-  The `chart-*` hues appear ONLY inside charts, never in chrome — don't
-  borrow them for selection states, badges, or buttons. Everything else
-  reads through neutral value contrast. Avatars stay stock: neutral fill
-  (`muted` background, `foreground` initials), `rounded-full`.
+- **Theme and interactive accent.** Green `primary` (#18A00D light /
+  #5AC750 dark) is the theme color and the only interactive accent: use it for
+  primary CTAs, selection, active tabs, links, and the existing control fills
+  (checkbox/switch/radio checked state, progress indicator, slider, calendar
+  selected day, and badge/button default). Focus rings stay neutral `--ring`,
+  while tint-style variants keep their existing same-hue faint focus ring; that
+  is an existing pattern, not a new accent. `primary` never expresses status.
+- **Independent status palette.** Status has its own palette: `info`,
+  `success`, `warning`, and `destructive` are independent hues (`success` is
+  not an alias of `primary`) and status may fill. `info` and `success` are
+  restricted to dots, text, icons, thin lines, and `bg-x/10 text-x` badges (no
+  filled faces); `warning` and `destructive` may additionally tint (`/10`,
+  dark `/20`) message components and data containers such as rows and cards.
+  `critical` is a solid `bg-destructive text-destructive-foreground` fill,
+  restricted to message components only (Badge, Alert, banner), never a data
+  row or card. A point is ≤12px in both dimensions, a line is ≤8px thick at
+  any length, and everything else is a face; only `critical` may fill a face.
+  Every status signal must carry text, an icon, or a shape in addition to
+  color.
+- **Charts and avatars.** Chart hues never express status or interaction — no
+  badges, buttons, selection, or status bars. Avatar fallbacks stay stock by
+  default: neutral fill (`muted` background, `muted-foreground` initials),
+  `rounded-full`; when color aids identification (for example, member lists or
+  multi-vendor views), the fallback may be tinted via `avatarTint(id)` from
+  `src/lib/avatar-tint.ts` (`bg-chart-N/15 text-foreground`, a stable hash —
+  not random or render-order-dependent). `AvatarBadge` is the presence dot:
+  `online` (success, solid), `busy` (warning, solid, shows a `Minus` icon), or
+  `offline` (hollow).
 - **One radius knob.** All corner rounding derives from `--radius` (0.625rem)
   via the multiplier scale. Change the base, everything follows.
 - **Dark mode is a value flip** on the `.dark` class — same token names, no

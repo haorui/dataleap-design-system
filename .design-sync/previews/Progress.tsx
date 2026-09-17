@@ -25,3 +25,22 @@ export const CustomValueFormat = () => (
     <ProgressValue>{(_, value) => `${value} GB of 100 GB`}</ProgressValue>
   </Progress>
 )
+
+export const UsageThreshold = () => (
+  <div style={{ display: "grid", gap: 20, width: 360 }}>
+    <Progress
+      value={72}
+      className="[&_[data-slot=progress-indicator]]:bg-warning"
+    >
+      <ProgressLabel>Approaching limit</ProgressLabel>
+      <ProgressValue />
+    </Progress>
+    <Progress
+      value={96}
+      className="[&_[data-slot=progress-indicator]]:bg-destructive"
+    >
+      <ProgressLabel>Critical usage</ProgressLabel>
+      <ProgressValue />
+    </Progress>
+  </div>
+)

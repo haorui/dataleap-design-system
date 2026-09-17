@@ -5,6 +5,7 @@ import {
   AvatarGroup,
   AvatarGroupCount,
   AvatarImage,
+  avatarTint,
 } from "dataleap-design-system"
 
 const avatarSvg = (bg: string, fg: string, initials: string) =>
@@ -43,17 +44,99 @@ export const Sizes = () => (
   </div>
 )
 
-export const WithBadge = () => (
-  <div style={{ display: "flex", gap: 16, alignItems: "center" }}>
-    <Avatar>
-      <AvatarImage src={avatarSvg("#10b981", "#ffffff", "AR")} alt="Ana Reyes" />
-      <AvatarFallback>AR</AvatarFallback>
-      <AvatarBadge />
+export const Presence = () => (
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "auto repeat(3, minmax(0, auto))",
+      gap: 12,
+      alignItems: "center",
+    }}
+  >
+    <span />
+    <span>sm</span>
+    <span>default</span>
+    <span>lg</span>
+
+    <span>Online</span>
+    <Avatar size="sm">
+      <AvatarFallback>ON</AvatarFallback>
+      <AvatarBadge variant="online">
+        <span className="sr-only">Online</span>
+      </AvatarBadge>
+    </Avatar>
+    <Avatar size="default">
+      <AvatarFallback>ON</AvatarFallback>
+      <AvatarBadge variant="online">
+        <span className="sr-only">Online</span>
+      </AvatarBadge>
     </Avatar>
     <Avatar size="lg">
-      <AvatarFallback>TW</AvatarFallback>
-      <AvatarBadge />
+      <AvatarFallback>ON</AvatarFallback>
+      <AvatarBadge variant="online">
+        <span className="sr-only">Online</span>
+      </AvatarBadge>
     </Avatar>
+
+    <span>Busy</span>
+    <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+      <Avatar size="sm">
+        <AvatarFallback>BU</AvatarFallback>
+        <AvatarBadge variant="busy">
+          <span className="sr-only">Busy</span>
+        </AvatarBadge>
+      </Avatar>
+      <span>Busy</span>
+    </div>
+    <Avatar size="default">
+      <AvatarFallback>BU</AvatarFallback>
+      <AvatarBadge variant="busy">
+        <span className="sr-only">Busy</span>
+      </AvatarBadge>
+    </Avatar>
+    <Avatar size="lg">
+      <AvatarFallback>BU</AvatarFallback>
+      <AvatarBadge variant="busy">
+        <span className="sr-only">Busy</span>
+      </AvatarBadge>
+    </Avatar>
+
+    <span>Offline</span>
+    <Avatar size="sm">
+      <AvatarFallback>OF</AvatarFallback>
+      <AvatarBadge variant="offline">
+        <span className="sr-only">Offline</span>
+      </AvatarBadge>
+    </Avatar>
+    <Avatar size="default">
+      <AvatarFallback>OF</AvatarFallback>
+      <AvatarBadge variant="offline">
+        <span className="sr-only">Offline</span>
+      </AvatarBadge>
+    </Avatar>
+    <Avatar size="lg">
+      <AvatarFallback>OF</AvatarFallback>
+      <AvatarBadge variant="offline" aria-label="Offline" />
+    </Avatar>
+  </div>
+)
+
+const tintUsers = [
+  { id: "member-1", initials: "M1" },
+  { id: "member-2", initials: "M2" },
+  { id: "member-3", initials: "M3" },
+  { id: "member-6", initials: "M6" },
+  { id: "member-7", initials: "M7" },
+  { id: "member-11", initials: "M11" },
+]
+
+export const IdentityTint = () => (
+  <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+    {tintUsers.map((user) => (
+      <Avatar key={user.id}>
+        <AvatarFallback className={avatarTint(user.id)}>{user.initials}</AvatarFallback>
+      </Avatar>
+    ))}
   </div>
 )
 

@@ -2,7 +2,9 @@
 category: Data Display
 ---
 
-Compact pill label for statuses, counts, and metadata. Variants: `default`, `secondary`, `destructive`, `outline`, `ghost`, `link`.
+Compact pill label for statuses, counts, and metadata. Variants: `default`, `secondary`, `destructive`, `info`, `success`, `warning`, `critical`, `outline`, `ghost`, `link`.
+
+Use `info` for informational updates, `success` for positive or completed states, `warning` for attention or approaching limits, and `critical` for immediate high-severity interruption. `default` (primary) is for non-status emphasis such as “New”, “Beta”, or counts, not status.
 
 ## Components
 
@@ -16,7 +18,7 @@ import { Badge } from "dataleap-design-system"
 import { BadgeCheck } from "lucide-react"
 
 <Badge variant="secondary">Draft</Badge>
-<Badge>
+<Badge variant="success">
   <BadgeCheck data-icon="inline-start" /> Verified
 </Badge>
 ```

@@ -16,22 +16,28 @@ Components style themselves via Tailwind classes compiled into `styles.css`. For
 Token vocabulary (each `--x` has a `--x-foreground` partner where noted; all are `var(--…)`-able):
 
 - Surfaces: `--background`, `--card`+fg, `--popover`+fg, `--sidebar`(+fg/-primary/-accent/-border/-ring)
-- Semantic: `--primary`+fg, `--secondary`+fg, `--muted`+fg, `--accent`+fg, `--destructive`, `--border`, `--input`, `--ring`
-- Charts: `--chart-1`…`--chart-6` — a six-color categorical scale: green (brand) / blue / amber / violet / rose / teal, ordered for adjacent distinctness. These hues belong **only** in charts — never in UI chrome (buttons, badges, selection states, rings), which accents through `--primary` alone.
-- Shape/type: `--radius` (0.625rem) plus `--radius-sm`, `--radius-md` and `--radius-lg` — those four are all the shipped stylesheet defines, so only they resolve (`--radius-xl` and up are tree-shaken out). `--font-sans` / `--font-heading` = "Geist Variable"
+- Semantic: `--primary`+fg, `--secondary`+fg, `--muted`+fg, `--accent`+fg, `--destructive`, `--destructive-foreground`, `--info`+fg, `--success`+fg, `--warning`+fg, `--border`, `--input`, `--ring`
+- Charts: `--chart-1`…`--chart-6` — a six-color categorical scale: green (brand) / blue / amber / violet / rose / teal, ordered for adjacent distinctness. These hues belong **only** in charts — never in UI chrome (buttons, badges, selection states, rings), except for deliberate avatar identity tint via `avatarTint` when color aids identification.
+- Shape/type: the shipped stylesheet defines `--radius` (0.625rem), `--radius-sm`, `--radius-md`, `--radius-lg`, and `--radius-xl`. `--font-sans` / `--font-heading` = "Geist Variable"
 
 Example glue: `style={{ display: "grid", gap: 12, background: "var(--muted)", borderRadius: "var(--radius)" }}`.
 
-Component variants come from props, never custom classes: `Button variant="outline" size="sm"`, `Badge variant="destructive"`, `Alert variant="destructive"`, `Card size="sm"`, `Tabs variant="line"`. Mark button icons with `data-icon="inline-start"`/`"inline-end"` for correct padding.
+Component variants come from props, never custom classes: `Button variant="outline" size="sm"`, `Badge variant="destructive"`, `Badge variant="info|success|warning|critical"`, `Alert variant="destructive"`, `Alert variant="info|success|warning|critical"`, `AvatarBadge variant="online|busy|offline"`, `Card size="sm"`, `Tabs variant="line"`. Mark button icons with `data-icon="inline-start"`/`"inline-end"` for correct padding.
 
-**Avatars stay stock.** Neutral fill only — `--muted` background, `--foreground` initials, `rounded-full`. Don't tint them with `--chart-*` hues; identity reads from the initials or image, not from color.
+**Avatars.** By default, fallbacks stay stock: `--muted` background,
+`--muted-foreground` initials, and `rounded-full`. When identification benefits
+from color, `avatarTint(id)` is an opt-in stable-hash override using
+`bg-chart-N/15 text-foreground`; `AvatarBadge` supplies presence variants:
+`online` (success, solid), `busy` (warning, solid, with a `Minus` icon), and
+`offline` (hollow). Status belongs on the badge, not the avatar fill.
 
 ## Design rules
 
 The system's own constraints — they hold for anything built with this kit.
 
 - **Semantic tokens only.** Colour always flows through the semantic variables (`--background`, `--muted-foreground`, `--border`, …). Never hard-code a hex or `oklch()` value in a component or a layout.
-- **One accent.** `--primary` (brand green) is the only accent hue in UI chrome — selection, toggles, active states, rings. `--destructive` is reserved for destructive actions. Everything else separates by neutral value contrast, not by colour.
+- **Interactive accent.** Green `--primary` is the theme/interactive accent for primary CTAs, selection, active tabs, links, and existing control fills; focus stays on neutral `--ring`. `--primary` never expresses status.
+- **Status palette.** `--info`, `--success`, `--warning`, and `--destructive` are independent hues (`--success` is not an alias of `--primary`); info/success stay to dots, text, icons, thin lines (≤8px), and `bg-x/10 text-x` badges, while warning/destructive may also tint message/data surfaces such as rows and cards (`/10`, dark `/20`). `critical` is the solid destructive fill for message components only, never rows/cards; points are ≤12px, faces are everything else, and only critical fills a face. Every status signal also uses text, an icon, or a shape.
 - **One radius knob.** All corner rounding derives from `--radius` (0.625rem); reach for `--radius-sm` / `--radius-md` rather than fixed pixel values.
 - **One typeface.** Geist Variable throughout — hierarchy comes from size and weight, never from a family change.
 - **Dark mode is a value flip.** The `.dark` class re-values the same token names; there is no parallel palette and no dark-only token. Dark borders and inputs are white at 10% / 15% alpha, not opaque grey.

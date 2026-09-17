@@ -1,16 +1,16 @@
 {
   "name": "dataleap-design-system",
-  "description": "shadcn/ui skeleton with the DataLeap brand pinned: brand-green primary (#18A00D/#5AC750), six-color green-anchored categorical chart scale (chart-1..6), stock neutral oklch surfaces, Geist font. 60 components installed verbatim via `shadcn add --all`.",
+  "description": "shadcn/ui skeleton with the DataLeap brand pinned: brand-green primary (#18A00D/#5AC750), independent info/success/warning/destructive status palette, six-color green-anchored categorical chart scale (chart-1..6), stock neutral oklch surfaces, Geist font. 60 components; Badge, Alert, and AvatarBadge carry local variant additions.",
   "framework": "react",
   "language": "typescript",
   "styling": "tailwind-v4-css-variables",
   "tokens": {
     "css": "src/index.css",
-    "notes": "Semantic CSS variables in :root (light) and .dark (dark). Radius scale derives from the single --radius base. Values are oklch."
+    "notes": "Semantic CSS variables in :root (light) and .dark (dark). Radius scale derives from the single --radius base. Neutrals use oklch; brand, chart, and status colors use hex."
   },
   "components": {
     "directory": "src/components/ui",
-    "notes": "One file per component, stock shadcn source. Import alias: @/components/ui/<name>."
+    "notes": "One file per component, stock shadcn source with local variant additions in Badge, Alert, and Avatar. Import alias: @/components/ui/<name>."
   },
   "utils": "src/lib/utils.ts",
   "config": "components.json",

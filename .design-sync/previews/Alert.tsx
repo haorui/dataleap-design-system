@@ -5,7 +5,12 @@ import {
   AlertTitle,
   Button,
 } from "dataleap-design-system"
-import { CheckCircle2Icon, InfoIcon, OctagonAlertIcon } from "lucide-react"
+import {
+  CheckCircle2Icon,
+  InfoIcon,
+  OctagonAlertIcon,
+  TriangleAlertIcon,
+} from "lucide-react"
 
 export const Default = () => (
   <div style={{ display: "grid", gap: 12, width: 440 }}>
@@ -36,6 +41,38 @@ export const Destructive = () => (
       keep the workspace active.
     </AlertDescription>
   </Alert>
+)
+
+export const Statuses = () => (
+  <div style={{ display: "grid", gap: 12, width: 440 }}>
+    <Alert variant="info">
+      <InfoIcon />
+      <AlertTitle>Scheduled maintenance</AlertTitle>
+      <AlertDescription>
+        Maintenance starts Saturday at 02:00 UTC.
+      </AlertDescription>
+    </Alert>
+    <Alert variant="success">
+      <CheckCircle2Icon />
+      <AlertTitle>Changes saved</AlertTitle>
+      <AlertDescription>Your workspace settings are up to date.</AlertDescription>
+    </Alert>
+    <Alert variant="warning">
+      <TriangleAlertIcon />
+      <AlertTitle>Storage nearly full</AlertTitle>
+      <AlertDescription>
+        Review large files before the workspace reaches its limit.
+      </AlertDescription>
+    </Alert>
+    <Alert variant="critical">
+      <OctagonAlertIcon />
+      <AlertTitle>Payment failed</AlertTitle>
+      <AlertDescription>
+        <a href="/billing">Update your billing details</a> to keep the
+        workspace active.
+      </AlertDescription>
+    </Alert>
+  </div>
 )
 
 export const WithAction = () => (

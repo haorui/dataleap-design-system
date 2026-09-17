@@ -1,5 +1,11 @@
 import { Badge } from "dataleap-design-system"
-import { AlertCircle, ArrowUpRight, BadgeCheck, Clock } from "lucide-react"
+import {
+  AlertCircle,
+  ArrowUpRight,
+  BadgeCheck,
+  Clock,
+  InfoIcon,
+} from "lucide-react"
 
 export const Variants = () => (
   <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
@@ -17,11 +23,20 @@ export const Statuses = () => (
     <Badge variant="secondary">
       <Clock data-icon="inline-start" /> Pending
     </Badge>
-    <Badge>
+    <Badge variant="success">
       <BadgeCheck data-icon="inline-start" /> Verified
+    </Badge>
+    <Badge variant="info">
+      <InfoIcon data-icon="inline-start" /> Informational
+    </Badge>
+    <Badge variant="warning">
+      <Clock data-icon="inline-start" /> Review soon
     </Badge>
     <Badge variant="destructive">
       <AlertCircle data-icon="inline-start" /> 3 failed
+    </Badge>
+    <Badge variant="critical">
+      <AlertCircle data-icon="inline-start" /> Immediate action
     </Badge>
     <Badge variant="outline">
       Docs <ArrowUpRight data-icon="inline-end" />
