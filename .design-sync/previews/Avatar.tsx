@@ -5,7 +5,6 @@ import {
   AvatarGroup,
   AvatarGroupCount,
   AvatarImage,
-  avatarTint,
 } from "dataleap-design-system"
 
 const avatarSvg = (bg: string, fg: string, initials: string) =>
@@ -118,25 +117,6 @@ export const Presence = () => (
       <AvatarFallback>OF</AvatarFallback>
       <AvatarBadge variant="offline" aria-label="Offline" />
     </Avatar>
-  </div>
-)
-
-const tintUsers = [
-  { id: "member-1", initials: "M1" },
-  { id: "member-2", initials: "M2" },
-  { id: "member-3", initials: "M3" },
-  { id: "member-6", initials: "M6" },
-  { id: "member-7", initials: "M7" },
-  { id: "member-11", initials: "M11" },
-]
-
-export const IdentityTint = () => (
-  <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-    {tintUsers.map((user) => (
-      <Avatar key={user.id}>
-        <AvatarFallback className={avatarTint(user.id)}>{user.initials}</AvatarFallback>
-      </Avatar>
-    ))}
   </div>
 )
 

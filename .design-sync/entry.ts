@@ -58,5 +58,4 @@ export * from "@/components/ui/toast";
 export * from "@/components/ui/toggle-group";
 export * from "@/components/ui/toggle";
 export * from "@/components/ui/tooltip";
-export * from "@/lib/avatar-tint";
 export * from "@/components/theme-provider";
