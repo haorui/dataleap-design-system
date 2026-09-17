@@ -62,27 +62,7 @@ import { Avatar, AvatarBadge, AvatarFallback, AvatarImage } from "dataleap-desig
 </div>
 ```
 
-`Presence` renders a 3×3 matrix: rows are `online`, `busy`, and `offline`; columns are `sm`, `default`, and `lg`. `online` is the default presence state: a solid success badge. `busy` is a solid warning badge with a `Minus` icon; the icon is hidden at `sm`, so the `busy` + `sm` cell requires adjacent visible text. `offline` is hollow. Status never goes on the avatar fill itself; it belongs on the badge.
-
-```tsx
-import { Avatar, AvatarFallback, avatarTint } from "dataleap-design-system"
-
-const users = [
-  { id: "member-1", initials: "HL" },
-  { id: "member-2", initials: "JD" },
-  { id: "member-3", initials: "MK" },
-]
-
-<div style={{ display: "flex", gap: 12 }}>
-  {users.map((user) => (
-    <Avatar key={user.id}>
-      <AvatarFallback className={avatarTint(user.id)}>{user.initials}</AvatarFallback>
-    </Avatar>
-  ))}
-</div>
-```
-
-By default, avatar fallbacks use a `muted` background and `muted-foreground` initials. When color helps identify members, `avatarTint(user.id)` is a stable-hash opt-in (`bg-chart-N/15 text-foreground`), not random or render-order-dependent.
+`Presence` renders a 3×3 matrix: rows are `online`, `busy`, and `offline`; columns are `sm`, `default`, and `lg`. `online` is the default presence state: a solid success badge. `busy` is a solid warning badge with a `Minus` icon; the icon is hidden at `sm`, so the `busy` + `sm` cell requires adjacent visible text. `offline` is hollow.
 
 Note: `tsconfig.app.json` includes only `["src"]`, so `pnpm typecheck` does not typecheck anything under `.design-sync/`, including previews. The gitignored sync tooling, run from the main checkout only, is what actually compiles and typechecks previews.
 
