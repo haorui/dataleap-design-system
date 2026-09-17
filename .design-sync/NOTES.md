@@ -24,7 +24,7 @@
 
 ## Preview-authoring recipes (folded from wave 1 learnings, 2026-07-24)
 
-- **base-ui composition uses `render={<Button/>}`**, not Radix `asChild`. Tooltip needs `TooltipProvider`. DrawerContent throws outside `Drawer`.
+- **base-ui composition uses `render={<Button/>}`**, not Radix `asChild`. `TooltipProvider` is optional in base-ui 1.6 (Root + Trigger render without it; use the provider to share delay settings). DrawerContent throws outside `Drawer`.
 - **Bare `*MenuLabel` outside a Group crashes the whole React root blank** (base-ui `MenuGroupContext is missing`) — always wrap DropdownMenuLabel/ContextMenuLabel/MenubarLabel in `*MenuGroup`/`*MenuRadioGroup`. The classic shadcn "bare label atop Content" pattern does NOT work in this port.
 - Open-state recipes: DropdownMenu `defaultOpen modal={false}`; MenubarMenu `defaultOpen`; NavigationMenu root `defaultValue` + item `value`; ContextMenu needs a mount-time dispatched `contextmenu` MouseEvent (see previews/ContextMenu.tsx).
 - **recharts is bundled twice** (once in _ds_bundle.js, once per preview) → ChartContainer's ResponsiveContainer context never reaches preview-authored chart elements; charts silently blank. Workaround in previews (and guidance for designs): explicit width/height on the chart element, import Tooltip/Legend from recharts with the kit's ChartTooltipContent/ChartLegendContent as `content`, `isAnimationActive={false}`. Proper fix: externalize recharts in preview-rebuild like react.

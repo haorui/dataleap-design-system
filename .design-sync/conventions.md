@@ -2,7 +2,7 @@
 
 ## Setup & wrapping
 
-- Most components need **no provider** — tokens live in `styles.css` and apply globally. Exceptions: `Tooltip` must sit inside `TooltipProvider`; `Sidebar` inside `SidebarProvider` (pair with `SidebarInset` for the content pane); toasts render through `<Toaster />` mounted once, fired imperatively with `toast.add({ title, description })`.
+- Most components need **no provider** — tokens live in `styles.css` and apply globally. Exceptions: `Tooltip` works standalone but wrap a group in `TooltipProvider` to share delay settings; `Sidebar` inside `SidebarProvider` (pair with `SidebarInset` for the content pane); toasts render through `<Toaster />` mounted once, fired imperatively with `toast.add({ title, description })`.
 - **Dark mode**: add class `dark` to any ancestor (usually the root element). `ThemeProvider` (localStorage-backed) ships in the bundle if you need a toggle.
 - This kit is built on **base-ui, not Radix**: compose triggers with the `render` prop, e.g. `<DialogTrigger render={<Button variant="outline" />}>Open</DialogTrigger>` — there is **no `asChild`**.
 - **Menu labels must be wrapped in a group**: a bare `DropdownMenuLabel`/`ContextMenuLabel`/`MenubarLabel` outside `*MenuGroup`/`*MenuRadioGroup` throws and blanks the whole tree. Always `<DropdownMenuGroup><DropdownMenuLabel>…</DropdownMenuLabel>…</DropdownMenuGroup>`.
@@ -22,7 +22,7 @@ Token vocabulary (each `--x` has a `--x-foreground` partner where noted; all are
 
 Example glue: `style={{ display: "grid", gap: 12, background: "var(--muted)", borderRadius: "var(--radius)" }}`.
 
-Component variants come from props, never custom classes: `Button variant="outline" size="sm"`, `Badge variant="destructive"`, `Badge variant="info|success|warning|critical"`, `Alert variant="destructive"`, `Alert variant="info|success|warning|critical"`, `AvatarBadge variant="online|busy|offline"`, `Card size="sm"`, `Tabs variant="line"`. Mark button icons with `data-icon="inline-start"`/`"inline-end"` for correct padding.
+Pick an existing variant through props before reaching for `className` (a `className` is fine for product-specific tweaks such as a threshold-colored Progress indicator): `Button variant="outline" size="sm"`, `Badge variant="destructive"`, `Badge variant="info|success|warning|critical"`, `Alert variant="destructive"`, `Alert variant="info|success|warning|critical"`, `AvatarBadge variant="online|busy|offline"`, `Card size="sm"`, `Tabs variant="line"`. Mark button icons with `data-icon="inline-start"`/`"inline-end"` for correct padding.
 
 **Avatars.** By default, fallbacks stay stock: `--muted` background,
 `--muted-foreground` initials, and `rounded-full`. When identification benefits
