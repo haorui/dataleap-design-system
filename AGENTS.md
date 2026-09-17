@@ -19,7 +19,7 @@ Two follow-ups to the question:
 - If a stock component does not satisfy a need, the first answer is a composition or a `className` in the product, not a new variant here. shadcn's own dashboards are built that way.
 - A rule that needs escalation conditions or "when X but not Y" wording is a product guideline, however consistent it looks. Keep `DESIGN.md` rules to token meaning and hard constraints.
 
-Lesson recorded from #6 / #7: the status tokens and the Badge / Alert variants belonged here; the AvatarBadge presence variants, the `avatarTint` helper and the point/line/face usage rules did not, and are being moved out (#8). **Until #8 lands, `DESIGN.md` and `.design-sync/conventions.md` still carry those product rules; where they conflict with this triage table, the table wins.**
+Lesson recorded from #6 / #7: the status tokens and the Badge / Alert variants belonged here; the AvatarBadge presence variants, the `avatarTint` helper and the point/line/face usage rules did not, and were moved out again in #10 and this change (#8). **`DESIGN.md` and `.design-sync/conventions.md` may still carry traces of those product rules; where they conflict with this triage table, the table wins.**
 
 ## Where rules live
 
