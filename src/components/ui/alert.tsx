@@ -11,6 +11,13 @@ const alertVariants = cva(
         default: "bg-card text-card-foreground",
         destructive:
           "bg-card text-destructive *:data-[slot=alert-description]:text-destructive/90 *:[svg]:text-current",
+        info: "bg-card text-info *:data-[slot=alert-description]:text-info/90 *:[svg]:text-current",
+        success:
+          "bg-card text-success *:data-[slot=alert-description]:text-success/90 *:[svg]:text-current",
+        warning:
+          "bg-card text-warning *:data-[slot=alert-description]:text-warning/90 *:[svg]:text-current",
+        critical:
+          "bg-destructive text-destructive-foreground border-destructive *:data-[slot=alert-description]:text-current *:[svg]:text-current",
       },
     },
     defaultVariants: {
@@ -28,6 +35,7 @@ function Alert({
     <div
       data-slot="alert"
       role="alert"
+      data-variant={variant ?? "default"}
       className={cn(alertVariants({ variant }), className)}
       {...props}
     />
@@ -39,7 +47,7 @@ function AlertTitle({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="alert-title"
       className={cn(
-        "font-medium group-has-[>svg]/alert:col-start-2 [&_a]:underline [&_a]:underline-offset-3 [&_a]:hover:text-foreground",
+        "font-medium group-has-[>svg]/alert:col-start-2 [&_a]:underline [&_a]:underline-offset-3 [&_a]:hover:text-foreground group-data-[variant=critical]/alert:[&_a]:hover:text-current group-data-[variant=critical]/alert:[&_a]:hover:decoration-2",
         className
       )}
       {...props}
@@ -55,7 +63,7 @@ function AlertDescription({
     <div
       data-slot="alert-description"
       className={cn(
-        "text-sm text-balance text-muted-foreground md:text-pretty [&_a]:underline [&_a]:underline-offset-3 [&_a]:hover:text-foreground [&_p:not(:last-child)]:mb-4",
+        "text-sm text-balance text-muted-foreground md:text-pretty [&_a]:underline [&_a]:underline-offset-3 [&_a]:hover:text-foreground [&_p:not(:last-child)]:mb-4 group-data-[variant=critical]/alert:[&_a]:hover:text-current group-data-[variant=critical]/alert:[&_a]:hover:decoration-2",
         className
       )}
       {...props}

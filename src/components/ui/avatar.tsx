@@ -1,5 +1,7 @@
 import * as React from "react"
 import { Avatar as AvatarPrimitive } from "@base-ui/react/avatar"
+import { cva, type VariantProps } from "class-variance-authority"
+import { MinusIcon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
@@ -52,19 +54,38 @@ function AvatarFallback({
   )
 }
 
-function AvatarBadge({ className, ...props }: React.ComponentProps<"span">) {
+const avatarBadgeVariants = cva(
+  "absolute right-0 bottom-0 z-10 inline-flex items-center justify-center rounded-full bg-blend-color ring-2 ring-background select-none group-data-[size=sm]/avatar:size-2 group-data-[size=sm]/avatar:[&>svg]:hidden group-data-[size=default]/avatar:size-2.5 group-data-[size=default]/avatar:[&>svg]:size-2 group-data-[size=lg]/avatar:size-3 group-data-[size=lg]/avatar:[&>svg]:size-2",
+  {
+    variants: {
+      variant: {
+        online: "bg-success text-success-foreground",
+        busy: "bg-warning text-warning-foreground",
+        offline:
+          "bg-background border-2 border-muted-foreground text-muted-foreground",
+      },
+    },
+    defaultVariants: { variant: "online" },
+  }
+)
+
+function AvatarBadge({
+  className,
+  variant,
+  children,
+  ...props
+}: React.ComponentProps<"span"> & VariantProps<typeof avatarBadgeVariants>) {
   return (
     <span
       data-slot="avatar-badge"
-      className={cn(
-        "absolute right-0 bottom-0 z-10 inline-flex items-center justify-center rounded-full bg-primary text-primary-foreground bg-blend-color ring-2 ring-background select-none",
-        "group-data-[size=sm]/avatar:size-2 group-data-[size=sm]/avatar:[&>svg]:hidden",
-        "group-data-[size=default]/avatar:size-2.5 group-data-[size=default]/avatar:[&>svg]:size-2",
-        "group-data-[size=lg]/avatar:size-3 group-data-[size=lg]/avatar:[&>svg]:size-2",
-        className
-      )}
+      data-variant={variant ?? "online"}
+      role={props["aria-label"] ? "img" : undefined}
+      className={cn(avatarBadgeVariants({ variant }), className)}
       {...props}
-    />
+    >
+      {variant === "busy" ? <MinusIcon aria-hidden="true" /> : null}
+      {children}
+    </span>
   )
 }
 
