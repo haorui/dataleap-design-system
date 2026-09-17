@@ -1,3 +1,8 @@
+/**
+ * @deprecated Product-level recipe, not a design-system capability (see AGENTS.md
+ * triage rule and issue #8). Kept only until the next component sync; copy it into
+ * your product if you need it. Will be removed without a major bump.
+ */
 export const AVATAR_TINTS = [
   "bg-chart-1/15 text-foreground",
   "bg-chart-2/15 text-foreground",
@@ -9,7 +14,11 @@ export const AVATAR_TINTS = [
 
 export type AvatarTint = (typeof AVATAR_TINTS)[number]
 
-/** Stable identity → tint class. FNV-1a 32-bit over UTF-16 code units, mod 6. Pure; same id ⇒ same tint everywhere. */
+/**
+ * Stable identity → tint class. FNV-1a 32-bit over UTF-16 code units, mod 6. Pure; same id ⇒ same tint everywhere.
+ *
+ * @deprecated
+ */
 export function avatarTint(id: string): AvatarTint {
   let hash = 0x811c9dc5
 

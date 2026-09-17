@@ -133,27 +133,21 @@ choices define the tier:
   selected day, and badge/button default). Focus rings stay neutral `--ring`,
   while tint-style variants keep their existing same-hue faint focus ring; that
   is an existing pattern, not a new accent. `primary` never expresses status.
-- **Independent status palette.** Status has its own palette: `info`,
-  `success`, `warning`, and `destructive` are independent hues (`success` is
-  not an alias of `primary`) and status may fill. `info` and `success` are
-  restricted to dots, text, icons, thin lines, and `bg-x/10 text-x` badges (no
-  filled faces); `warning` and `destructive` may additionally tint (`/10`,
-  dark `/20`) message components and data containers such as rows and cards.
-  `critical` is a solid `bg-destructive text-destructive-foreground` fill,
-  restricted to message components only (Badge, Alert, banner), never a data
-  row or card. A point is ≤12px in both dimensions, a line is ≤8px thick at
-  any length, and everything else is a face; only `critical` may fill a face.
-  Every status signal must carry text, an icon, or a shape in addition to
-  color.
-- **Charts and avatars.** Chart hues never express status or interaction — no
-  badges, buttons, selection, or status bars. Avatar fallbacks stay stock by
-  default: neutral fill (`muted` background, `muted-foreground` initials),
-  `rounded-full`; when color aids identification (for example, member lists or
-  multi-vendor views), the fallback may be tinted via `avatarTint(id)` from
-  `src/lib/avatar-tint.ts` (`bg-chart-N/15 text-foreground`, a stable hash —
-  not random or render-order-dependent). `AvatarBadge` is the presence dot:
-  `online` (success, solid), `busy` (warning, solid, shows a `Minus` icon), or
-  `offline` (hollow).
+- **Independent status palette.** `info`, `success`, `warning`, and
+  `destructive` are independent hues; `success` is not an alias of `primary`.
+  Tints use `bg-x/10 text-x` (`/20` dark); solid fills use
+  `bg-x text-x-foreground`. `critical` (Badge / Alert variant) is the only
+  solid destructive fill the kit ships, for messages needing immediate action.
+  Never signal by color alone: pair it with text, an icon, or a shape. Tier
+  choices (dots, badges, tinted rows, or solid banners) belong in the product's
+  own design doc, not here.
+- **Charts and avatars.** Chart hues never express status or interaction (no
+  badges, buttons, selection, or status bars). Avatar fallbacks stay stock:
+  `muted` background, `muted-foreground` initials, and `rounded-full`; products
+  may pass their own `className` on `AvatarFallback` for identity color, but the
+  kit ships no rule for it. `AvatarBadge` is a presence dot with `online` /
+  `busy` / `offline` variants (success / warning / hollow); state meaning and
+  placement are up to the product.
 - **One radius knob.** All corner rounding derives from `--radius` (0.625rem)
   via the multiplier scale. Change the base, everything follows.
 - **Dark mode is a value flip** on the `.dark` class — same token names, no

@@ -13,7 +13,7 @@ Inline callout banner with icon slot, title, description, and an optional top-ri
 Use `info` for neutral informational updates.
 Use `success` for completed or positive outcomes.
 Use `warning` when attention is needed before a threshold or deadline.
-Use `critical` only for immediate interruption: it uses a solid fill and is restricted to message components (never a data row or card).
+Use `critical` for immediate high-severity interruption.
 
 ## Usage
 
